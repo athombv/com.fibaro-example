@@ -1,0 +1,20 @@
+{
+  "value": 0,
+  "label": {
+    "en": "Delay for activation command (s)",
+    "nl": "Vertraging commando bij activatie (s)"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the duration of activation before the activation command is sent.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de duur van de sensor/alarm activatie voordat het commando wordt verstuurd."
+  },
+  "zwave": {
+    "index": 14,
+    "size": 2
+  },
+  "attr": {
+    "min": 0,
+    "max": 32400
+  },
+  "type": "number"
+}

@@ -1,0 +1,2 @@
+Fibaro heeft een uitgebreide lijn van sensoren en schakelaars – zowel plug-and-play en ingebouwd-en-onzichtbaar. Allemaal kunnen ze direct en draadloos bestuurd worden door Homey. Begin klein met de simpele, mooie en compacte Wall Plug, of ga direct all-in en maak al je verlichting slim met de Fibaro Dimmer.
+Start met de apparaten die je al hebt, zoals je tv, je Chromecast, Sonos, of je slimme thermostaat. Breidt uit en geniet van een steeds fijner huis. 

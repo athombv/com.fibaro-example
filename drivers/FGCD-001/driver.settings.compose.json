@@ -1,0 +1,276 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "CO sensor",
+      "nl": "CO sensor"
+    },
+    "collapsed": false,
+    "children": [
+      {
+        "$extends": "activateSensor",
+        "$id": "co_sensor_activation",
+        "zwave": {
+          "index": 23,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "reportThreshold",
+        "$id": "co_report_threshold",
+        "zwave": {
+          "index": 25,
+          "size": 1
+        },
+        "attr": {
+          "min": 2,
+          "max": 6
+        },
+        "value": 2
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature sensor",
+      "nl": "Temperatuursensor"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "reportThreshold",
+        "$id": "temperature_report_hysteresis",
+        "zwave": {
+          "index": 21,
+          "size": 1
+        },
+        "attr": {
+          "min": 1,
+          "max": 20
+        },
+        "value": 2
+      },
+      {
+        "$extends": "reportInterval",
+        "$id": "temperature_report_interval",
+        "zwave": {
+          "index": 20,
+          "size": 2
+        },
+        "attr": {
+          "min": 1,
+          "max": 2880
+        },
+        "value": 1
+      },
+      {
+        "$extends": "highThreshold",
+        "$id": "temperature_alarm_treshold",
+        "zwave": {
+          "index": 22,
+          "size": 1
+        },
+        "attr": {
+          "min": 1,
+          "max": 85
+        },
+        "value": 55
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Visual and acoustic notifications",
+      "nl": "Visuele en akoestische notificaties"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "ledStyle",
+        "$id": "visual_notification",
+        "zwave": {
+          "index": 3,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "No notifications",
+              "nl": "Geen meldingen"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Casing opened",
+              "nl": "Behuizing geopend"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Temperature too high",
+              "nl": "Temperatuur te hoog"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Lack of Z-Wave range",
+              "nl": "Te weinig Z-Wave bereik"
+            }
+          }
+        ],
+        "value": "0"
+      },
+      {
+        "id": "acoustic_notification",
+        "type": "dropdown",
+        "label": {
+          "en": "Acoutic notification",
+          "nl": "Akoestische meldingen"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the accoustic behaviour.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het acoustische gedrag."
+        },
+        "zwave": {
+          "index": 4,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "No notifications",
+              "nl": "Geen meldingen"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Casing opened",
+              "nl": "Behuizing geopend"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Temperature too high",
+              "nl": "Temperatuur te hoog"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Lack of Z-Wave range",
+              "nl": "Te weinig Z-Wave bereik"
+            }
+          }
+        ],
+        "value": "0"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Associations",
+      "nl": "Associaties"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "associationSecureMode",
+        "$id": "secure_mode_associaton",
+        "zwave": {
+          "index": 7,
+          "size": 1
+        },
+        "value": "63",
+        "values": [
+          {
+            "id": "1",
+            "label": {
+              "en": "2nd group sent as secure",
+              "nl": "2e groep beveiligd verzenden"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "3rd group sent as secure",
+              "nl": "3e groep beveiligd verzenden"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "2nd & 3rd group sent as secure",
+              "nl": "2e & 3e groep beveiligd verzenden"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "4th group sent as secure",
+              "nl": "4e groep beveiligd verzenden"
+            }
+          },
+          {
+            "id": "7",
+            "label": {
+              "en": "2nd, 3rd & 4th group sent as secure",
+              "nl": "2e, 3e & 4e groep beveiligd verzenden"
+            }
+          },
+          {
+            "id": "8",
+            "label": {
+              "en": "5th group sent as secure",
+              "nl": "5e groep beveiligd verzenden"
+            }
+          },
+          {
+            "id": "15",
+            "label": {
+              "en": "2nd, 3rd, 4th, 5th & 6th group sent as secure",
+              "nl": "2e, 3e, 4e, 5e & 6e groep beveiligd verzenden"
+            }
+          },
+          {
+            "id": "16",
+            "label": {
+              "en": "6th group sent as secure",
+              "nl": "6e groep beveiligd verzenden"
+            }
+          },
+          {
+            "id": "31",
+            "label": {
+              "en": "2nd, 3rd, 4th, 5th, 6th & 7th group sent as secure",
+              "nl": "2e, 3e, 4e, 5e, 6e & 7e groep beveiligd verzenden"
+            }
+          },
+          {
+            "id": "32",
+            "label": {
+              "en": "7th group sent as secure",
+              "nl": "7e groep beveiligd verzenden"
+            }
+          },
+          {
+            "id": "63",
+            "label": {
+              "en": "2nd, 3rd, 4th, 5th, 6th, 7th & 8th group sent as secure",
+              "nl": "2e, 3e, 4e, 5e, 6e, 7e & 8e groep beveiligd verzenden"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

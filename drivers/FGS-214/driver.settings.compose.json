@@ -1,0 +1,46 @@
+[
+  {
+    "$extends": "saveState",
+    "id": "9",
+    "zwave": {
+      "index": 9,
+      "size": 1
+    }
+  },
+  {
+    "$extends": "operatingDevice",
+    "id": "20",
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what kind of switch is attached to the module.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type schakelaar is verbonden aan de module."
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Momentary Switch",
+          "nl": "Korstondige schakelaar"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Toggle switch (Persistent positions)",
+          "nl": "Tuimel schakelaar (Vaste posities)"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Toggle switch (Toggle status on position change)",
+          "nl": "Tuimel schakelaar (Verander status bij elke positieverandering)"
+        }
+      }
+    ]
+  }
+]

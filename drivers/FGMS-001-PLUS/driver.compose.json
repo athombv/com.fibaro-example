@@ -1,0 +1,97 @@
+{
+  "id": "FGMS-001-PLUS",
+  "name": {
+    "en": "Motion Sensor (Z-Wave Plus)",
+    "nl": "Bewegingssensor (Z-Wave Plus)"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "measure_luminance",
+    "measure_temperature",
+    "alarm_motion",
+    "alarm_tamper"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [ "CR123A" ]
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      2049
+    ],
+    "productId": [
+      4097,
+      4098,
+      8193,
+      8194,
+      12289,
+      12290,
+      16385,
+      16386,
+      20481,
+      20482,
+      24577,
+      24578,
+      28673,
+      28674,
+      32769,
+      32770,
+      36865,
+      36866,
+      40961,
+      40962,
+      45057,
+      45058
+    ],
+    "includeSecure": false,
+    "zwaveAllianceProductId": 2762,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2762/FGMS-001-EN-T-v2.1.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your Fibaro Motion Sensor three times",
+        "nl": "Druk driemaal op de knop op de Fibaro Bewegingssensor"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Lifeline - report group. Homey ID by default. It is not recommended to change this group.",
+          "nl": "Lifeline - rapportage groep. Homey ID als standaard waarde. Het is niet aanbevolen om deze groep aan te passen."
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Trigger: Motion alarm - association group, command depends on the configuration. Add Z-wave ID of relay devices.",
+          "nl": "Trigger: Bewegingsalarm - associatie groep, commando is afhankelijk van de configuratie. Voeg het Z-wave ID van het te koppelen apparaat toe."
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "Trigger: Tamper alarm - association group. Add Z-wave ID of relay devices.",
+          "nl": "Trigger: Sabotagealarm- associatie groep. Voeg het Z-wave ID van het te koppelen apparaat toe."
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "Trigger: Motion alarm ZW3 - association group for ZW3 backward compatibility. Add Z-wave ID of relay devices.",
+          "nl": "Trigger: Bewegingsalarm - associatie groep voor ZW3 backward compatibility. Voeg het Z-wave ID van het te koppelen apparaat toe."
+        }
+      },
+      "5": {
+        "hint": {
+          "en": "Trigger: Tamper alarm ZW3 - association group for ZW3 backward compatibility. Add Z-wave ID of relay devices.",
+          "nl": "Trigger: Sabotagealarm - associatie groep voor ZW3 backward compatibility. Voeg het Z-wave ID van het te koppelen apparaat toe."
+        }
+      }
+    }
+  }
+}

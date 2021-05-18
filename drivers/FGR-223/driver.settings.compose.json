@@ -1,0 +1,89 @@
+[
+  {
+    "id": "start_calibration",
+    "type": "checkbox",
+    "label": {
+      "en": "Start calibration",
+      "nl": "Start kalibratie"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) starts the calibration procedure on save.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) start de kalibratieprocedure na het opslaan."
+    },
+    "zwave": {
+      "index": 150,
+      "size": 1
+    },
+    "value": false
+  },
+  {
+    "id": "invertInputDirection",
+    "type": "checkbox",
+    "label": {
+      "en": "Invert input",
+      "nl": "Keer de ingangen om"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) inverts the input direction.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) keert de ingangsdirectie om."
+    },
+    "zwave": {
+      "index": 24,
+      "size": 1
+    },
+    "value": false
+  },
+  {
+    "id": "invertOutputDirection",
+    "type": "checkbox",
+    "label": {
+      "en": "Invert output",
+      "nl": "Keer de uitgangen om"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) inverts the output direction.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) keert de uitgangsdirectie om."
+    },
+    "zwave": {
+      "index": 25,
+      "size": 1
+    },
+    "value": false
+  },
+  {
+    "$extends": "operatingDevice",
+    "$id": "switch_type",
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what switch is connected to this device.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wat voor een schakelaar het apparaat activeert."
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Double, Momentary switch",
+          "nl": "Dubbele pulsdrukschakelaar "
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Toggle switches",
+          "nl": "Tuimelschakelaars"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Single, momentary switch",
+          "nl": "Enkele pulsdrukschakelaar"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,141 @@
+{
+  "id": "FGBS-222",
+  "name": {
+    "en": "Smart Implant"
+  },
+  "class": "sensor",
+  "capabilities": [
+   "alarm_generic.input1",
+   "alarm_generic.input2",
+   "measure_voltage.input1",
+   "measure_voltage.input2",
+   "onoff.output1",
+   "onoff.output2",
+   "measure_temperature.internal",
+   "measure_temperature.external1",
+   "measure_temperature.external2",
+   "measure_temperature.external3",
+   "measure_temperature.external4",
+   "measure_temperature.external5",
+   "measure_temperature.external6"
+  ],
+  "capabilitiesOptions": {
+    "alarm_generic.input1": {
+      "title": {
+        "en": "Alarm input 1",
+        "nl": "Alarm ingang 1"
+      }
+    },
+    "alarm_generic.input2": {
+      "title": {
+        "en": "Alarm input 2",
+        "nl": "Alarm ingang 2"
+      }
+    },
+    "measure_voltage.input1": {
+      "title": {
+        "en": "Voltage input 1",
+        "nl": "Spanning ingang 1"
+      }
+    },
+    "measure_voltage.input2": {
+      "title": {
+        "en": "Voltage input 2",
+        "nl": "Spanning ingang 2"
+      }
+    },
+    "onoff.output1": {
+      "title": {
+        "en": "Output 1",
+        "nl": "Uitgang 1"
+      }
+    },
+    "onoff.output2": {
+      "title": {
+        "en": "Output 2",
+        "nl": "Uitgang 2"
+      }
+    },
+    "measure_temperature.internal": {
+      "title": {
+        "en": "Interal temperature sensor",
+        "nl": "Interne temperatuur sensor"
+      }
+    },
+    "measure_temperature.external1": {
+      "title": {
+        "en": "External temperature sensor 1",
+        "nl": "Externe temperatuur sensor 1"
+      }
+    },
+    "measure_temperature.external2": {
+      "title": {
+        "en": "External temperature sensor 2",
+        "nl": "Externe temperatuur sensor 2"
+      }
+    },
+    "measure_temperature.external3": {
+      "title": {
+        "en": "External temperature sensor 3",
+        "nl": "Externe temperatuur sensor 3"
+      }
+    },
+    "measure_temperature.external4": {
+      "title": {
+        "en": "External temperature sensor 4",
+        "nl": "Externe temperatuur sensor 4"
+      }
+    },
+    "measure_temperature.external5": {
+      "title": {
+        "en": "External temperature sensor 5",
+        "nl": "Externe temperatuur sensor 5"
+      }
+    },
+    "measure_temperature.external6": {
+      "title": {
+        "en": "External temperature sensor 6",
+        "nl": "Externe temperatuur sensor 6"
+      }
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": 1282,
+    "productId": [
+      4096,
+	    12288
+    ],
+    "includeSecure": false,
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your {{driverNameEn}} three times.",
+        "nl": "Druk driemaal op de knop van uw {{driverNameNl}}."
+      }
+    },
+    "associationGroupsMultiChannel": [
+      1
+    ],
+    "associationGroups": [
+      2,
+      3
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 20,
+        "size": 1,
+        "value": 1
+      },
+      {
+        "id": 21,
+        "size": 1,
+        "value": 1
+      }
+    ]
+  }
+}

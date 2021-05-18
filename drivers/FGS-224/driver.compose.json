@@ -1,0 +1,54 @@
+{
+  "id": "FGS-224",
+  "name": {
+    "en": "Double Smart Module",
+    "nl": "Dubbele Slimme Module"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      516
+    ],
+    "productId": [
+      4096,
+      12288
+    ],
+    "zwaveAllianceProductId": 2731,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=product_documents/3980/FGS-2x4-T-EN-1.0.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your {{driverNameEn}} three times, this can also be done with the S1 input.",
+        "nl": "Druk driemaal op de knop van uw {{driverNameNl}}, dit kan ook door middel van de S1 input."
+      }
+    },
+    "associationGroupsMultiChannel": [
+      1
+    ],
+    "associationGroups": [
+      2, 3, 4
+    ],
+    "multiChannelNodes": {
+      "2": {
+        "class": "socket",
+        "capabilities": [
+          "onoff"
+        ],
+        "icon": "{{driverAssetsPath}}/icon.svg",
+        "name": {
+          "en": "Smart Module Right Switch (S2/Q2)",
+          "nl": "Slimme Module Rechter Schakelaar (S2/Q2)"
+        },
+        "settings": []
+      }
+    }
+  }
+}

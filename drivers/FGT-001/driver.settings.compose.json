@@ -1,0 +1,53 @@
+[
+  {
+    "id": "poll_interval_battery",
+    "type": "number",
+    "attr": {
+      "min": 60,
+      "max": 86400
+    },
+    "value": 3600,
+    "label": {
+      "en": "Battery poll interval",
+      "nl": "Batterij poll interval"
+    },
+    "hint": {
+      "en": "The amount of seconds between asking the device for a status update.",
+      "nl": "Aantal seconden tussen het opvragen van een status update aan het apparaat."
+    }
+  },
+  {
+    "id": "poll_interval_measure_temperature",
+    "type": "number",
+    "attr": {
+      "min": 60,
+      "max": 86400
+    },
+    "value": 300,
+    "label": {
+      "en": "Measured temperature poll interval",
+      "nl": "Gemeten temperatuur poll interval"
+    },
+    "hint": {
+      "en": "The amount of seconds between asking the device for its latest measured temperature.",
+      "nl": "Aantal seconden tussen het opvragen van de laatst gemeten temperatuur aan het apparaat."
+    }
+  },
+  {
+    "id": "poll_interval_target_temperature",
+    "type": "number",
+    "attr": {
+      "min": 60,
+      "max": 86400
+    },
+    "value": 600,
+    "label": {
+      "en": "Target temperature poll interval",
+      "nl": "Doel temperatuur poll interval"
+    },
+    "hint": {
+      "en": "The amount of seconds between asking the device for its target temperature.",
+      "nl": "Aantal seconden tussen het opvragen van de doel temperatuur aan het apparaat."
+    }
+  }
+]

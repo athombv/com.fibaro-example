@@ -1,0 +1,42 @@
+[
+  {
+    "id": "switch_type",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch Type",
+      "nl": "Schakelaar Type"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what kind of switch is attached to the module.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type schakelaar is verbonden aan de module."
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Korstondige schakelaar"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Toggle switch (Persistent positions)",
+          "nl": "Tuimel schakelaar (Vaste posities)"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Toggle switch (Toggle status on position change)",
+          "nl": "Tuimel schakelaar (Verander status bij elke positieverandering)"
+        }
+      }
+    ]
+  }
+]

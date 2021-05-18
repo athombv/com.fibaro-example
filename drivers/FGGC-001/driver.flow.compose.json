@@ -1,0 +1,194 @@
+{
+  "triggers": [
+    {
+      "id": "fggc-001_swipe_direction",
+      "title": {
+        "en": "Gesture direction",
+        "nl": "Gebaar richting"
+      },
+      "hint": {
+        "en": "For this Flow Trigger to work the double gesture setting needs to be enabled in the device's settings.",
+        "nl": "Om deze Flow Trigger te laten werken moet het dubbele gebaar geactiveerd zijn in de apparaat instellingen."
+      },
+      "args": [
+        {
+          "name": "direction",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Up",
+                "nl": "Omhoog"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Down",
+                "nl": "Omlaag"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Left",
+                "nl": "Links"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Right",
+                "nl": "Rechts"
+              }
+            }
+          ]
+        },
+        {
+          "name": "scene",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "Key Pressed 1 time",
+              "label": {
+                "en": "1 time",
+                "nl": "1 keer"
+              }
+            },
+            {
+              "id": "Key Pressed 2 times",
+              "label": {
+                "en": "2 times",
+                "nl": "2 keer"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fggc-001_swipe_round",
+      "title": {
+        "en": "Gesture circular",
+        "nl": "Gebaar rondgaand"
+      },
+      "hint": {
+        "en": "When using the circular gesture it will trigger the \"Keep going round\" scene only once, and it will trigger the \"Going round stopped\" once the circular gesture is stopped.",
+        "nl": "Bij het gebruik van het rondgaande gebaar zal de \"Rond blijven gaan\" scene maar 1 keer worden geactiveerd, daarnaast activeert het uiteindelijk 1 keer de \"Rond gaan gestopt\" scene, wanneer het rondgaande gebaar wordt gestopt."
+      },
+      "args": [
+        {
+          "name": "direction",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "5",
+              "label": {
+                "en": "Clockwise",
+                "nl": "Met klok mee"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Counter clockwise",
+                "nl": "Tegen klok in"
+              }
+            }
+          ]
+        },
+        {
+          "name": "scene",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "Key Held Down",
+              "label": {
+                "en": "Keep going round",
+                "nl": "Rond blijven gaan"
+              }
+            },
+            {
+              "id": "Key Released",
+              "label": {
+                "en": "Going round stopped",
+                "nl": "Rond gaan gestopt"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fggc-001_swipe_sequence",
+      "title": {
+        "en": "Gesture sequence",
+        "nl": "Gebaren reeks"
+      },
+      "hint": {
+        "en": "Set the gesture sequences in the device's settings.",
+        "nl": "Stel de gebaren reeksen in bij de apparaat instellingen."
+      },
+      "args": [
+        {
+          "name": "direction",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "7",
+              "label": {
+                "en": "Sequence 1",
+                "nl": "Reeks 1"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Sequence 2",
+                "nl": "Reeks 2"
+              }
+            },
+            {
+              "id": "9",
+              "label": {
+                "en": "Sequence 3",
+                "nl": "Reeks 3"
+              }
+            },
+            {
+              "id": "10",
+              "label": {
+                "en": "Sequence 4",
+                "nl": "Reeks 4"
+              }
+            },
+            {
+              "id": "11",
+              "label": {
+                "en": "Sequence 5",
+                "nl": "Reeks 5"
+              }
+            },
+            {
+              "id": "12",
+              "label": {
+                "en": "Sequence 6",
+                "nl": "Reeks 6"
+              }
+            },
+            {
+              "id": "13",
+              "label": {
+                "en": "Inclusion/exlusion gesture",
+                "nl": "Voeg toe/verwijder gebaar"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "conditions": [],
+  "actions": []
+}

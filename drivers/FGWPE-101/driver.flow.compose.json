@@ -1,0 +1,169 @@
+{
+  "triggers": [],
+  "conditions": [],
+  "actions": [
+    {
+      "id": "FGWPE_led_on",
+      "title": {
+        "en": "LED Colour, On State",
+        "nl": "LED Kleur, Aan Status"
+      },
+      "args": [
+        {
+          "name": "color",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Power: Predefined Colours",
+                "nl": "Energie: Vooringestelde Kleuren"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Power: Full Colour Spectrum",
+                "nl": "Energie: Volledig Kleuren Spectrum"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "White",
+                "nl": "Wit"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Red",
+                "nl": "Rood"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Green",
+                "nl": "Groen"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Blue",
+                "nl": "Blauw"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Yellow",
+                "nl": "Geel"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Cyan",
+                "nl": "Cyaan"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Magenta",
+                "nl": "Magenta"
+              }
+            },
+            {
+              "id": "9",
+              "label": {
+                "en": "LED Off",
+                "nl": "LED Uit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FGWPE_led_off",
+      "title": {
+        "en": "LED Colour, Off State",
+        "nl": "LED Kleur, Uit Status"
+      },
+      "args": [
+        {
+          "name": "color",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Last Colour before off",
+                "nl": "Laatste Kleur voor uit"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "White",
+                "nl": "Wit"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Red",
+                "nl": "Rood"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Green",
+                "nl": "Groen"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Blue",
+                "nl": "Blauw"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Yellow",
+                "nl": "Geel"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Cyan",
+                "nl": "Cyaan"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Magenta",
+                "nl": "Magenta"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "LED Off",
+                "nl": "LED Uit"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

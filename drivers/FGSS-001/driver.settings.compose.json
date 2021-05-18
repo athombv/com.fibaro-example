@@ -1,0 +1,199 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Smoke sensor",
+      "nl": "Rookmelder"
+    },
+    "collapsed": false,
+    "children": [
+      {
+        "$extends": "sensitivity",
+        "$id": "smoke_sensitivity",
+        "zwave": {
+          "index": 82,
+          "size": 1,
+          "signed": false
+        }
+      },
+      {
+        "$extends": "cancellationDelay",
+        "$id": "smoke_alarm_cancellation_delay",
+        "zwave": {
+          "index": 1,
+          "size": 2,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 65535
+        },
+        "value": 0
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature sensor",
+      "nl": "Temperatuursensor"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "reportThreshold",
+        "$id": "temperature_report_hysteresis",
+        "zwave": {
+          "index": 12,
+          "size": 1
+        },
+        "attr": {
+          "min": 0,
+          "max": 100
+        },
+        "value": 20
+      },
+      {
+        "$extends": "reportInterval",
+        "$id": "temperature_report_interval",
+        "zwave": {
+          "index": 10,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 17280
+        },
+        "value": 17280
+      },
+      {
+        "$extends": "highThreshold",
+        "$id": "temperature_alarm_threshold",
+        "zwave": {
+          "index": 81,
+          "size": 1
+        },
+        "attr": {
+          "min": 0,
+          "max": 100
+        },
+        "value": 54
+      },
+      {
+        "$extends": "offset",
+        "$id": "temperature_offset",
+        "zwave": {
+          "index": 73,
+          "size": 2
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Tamper alarm",
+      "nl": "Sabotage alarm"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "id": "tamper_alarm",
+        "type": "dropdown",
+        "label": {
+          "en": "Tamper alarm",
+          "nl": "Sabotage alarm"
+        },
+        "value": "1",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the behaviour of the tamper alarm.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag van het sabotage alarm."
+        },
+        "zwave": {
+          "index": 89,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Inactive",
+              "nl": "Uitgeschakeld"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Active, with cancellation",
+              "nl": "Ingeschakeld, met annulering"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Active, without cancellation",
+              "nl": "Ingeschakeld, zonder annulering"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "LED and acoustic notifications",
+      "nl": "LED en akoestische notificaties"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "id": "led_and_acoustic_alarm",
+        "type": "dropdown",
+        "label": {
+          "en": "LED indicator and acoustic alarm",
+          "nl": "LED indicatie en akoestisch alarm"
+        },
+        "value": "3",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the behaviour of the visual and acoustic alarm when the alarm is triggerd.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag van de visuele en akoestische melding bij het af gaan van het alarm."
+        },
+        "zwave": {
+          "index": 2,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Acoustic and visual alarms inactive",
+              "nl": "Akoestisch en visueel alarm uitgeschakeld"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Only visual alarm active",
+              "nl": "Alleen visueel alarm ingeschakeld"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Only acoustic alarm active",
+              "nl": "Alleen akoestisch alarm ingeschakeld"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Acoustic and visual alarms active",
+              "nl": "Akoestisch en visueel alarm ingeschakeld"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

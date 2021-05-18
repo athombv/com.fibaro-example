@@ -1,0 +1,78 @@
+{
+  "id": "FGCD-001",
+  "name": {
+    "en": "CO Sensor",
+    "nl": "CO Sensor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_co",
+    "alarm_heat",
+    "measure_temperature"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [ "CR123A" ]
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      4609
+    ],
+    "productId": [
+      4096,
+      4097,
+      8192,
+      8193,
+      12288,
+      12289,
+      16384,
+      16385,
+      20480,
+      20481,
+      24576,
+      24577,
+      28672,
+      28673,
+      32768,
+      32769,
+      36864,
+      36865,
+      40960,
+      40961,
+      45056,
+      45057
+    ],
+    "includeSecure": false,
+    "zwaveAllianceProductId": 2336,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2336/FGCD-001-EN-T-v0.4.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your Fibaro CO Sensor three times",
+        "nl": "Druk driemaal op de knop bovenop de Fibaro CO Sensor"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "“Lifeline” reports the device status and allows for assigning single device only (main controller by default)."
+        }
+      }
+    },
+    "defaultConfiguration": [
+      {
+        "id": 2,
+        "size": 1,
+        "value": 3
+      }
+    ]
+  }
+}

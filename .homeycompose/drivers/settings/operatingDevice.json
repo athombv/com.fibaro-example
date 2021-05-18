@@ -1,0 +1,17 @@
+{
+  "type": "radio",
+  "label": {
+    "en": "Switch type",
+    "nl": "Schakelaar type"
+  },
+  "zwave": {
+    "index": 1,
+    "size": 1
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines what device triggers the alarm.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wat voor apparaat het alarm activeert."
+  },
+  "value": "0",
+  "values": []
+}

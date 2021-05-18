@@ -1,0 +1,39 @@
+{
+  "id": "FGRM-222",
+  "name": {
+    "en": "Roller Shutter 2 (<2.4)",
+    "nl": "Rolluikschakelaar 2 (<2.4)"
+  },
+  "class": "windowcoverings",
+  "capabilities": [
+    "windowcoverings_state",
+    "windowcoverings_set",
+    "measure_power",
+    "meter_power"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      769
+    ],
+    "productId": [
+      4097,
+      8193,
+      12289
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the B-button on your {{driverNameEn}} three times.",
+        "nl": "Druk driemaal op de B-knop op uw {{driverNameNl}}."
+      }
+    },
+    "associationGroups": [
+      3
+    ]
+  }
+}

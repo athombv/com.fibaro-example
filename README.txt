@@ -1,0 +1,2 @@
+Fibaro features an extensive range of sensors and switches, both plug-and-play and invisible-built-in. And all of them can be directly, wirelessly controlled by Homey. Start small with their simple, beautiful compact Wall Plug or go all-in and make all your existing light switches smart with the Fibaro Dimmer.
+Or start with the devices you already own, like your TV, Chromecast, Sonos or smart thermostat. Expand and enjoy an even better home. 

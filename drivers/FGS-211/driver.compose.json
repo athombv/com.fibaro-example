@@ -1,0 +1,57 @@
+{
+  "id": "FGS-211",
+  "name": {
+    "en": "Relay Switch",
+    "nl": "Relais Schakelaar"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      1024
+    ],
+    "productId": [
+      258,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      4106,
+      8202,
+      12298
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on the {{driverNameEn}} three times",
+        "nl": "Druk driemaal op de knop op de {{driverNameNl}}"
+      }
+    },
+    "associationGroups": [
+      3
+    ],
+    "multiChannelNodes": {
+      "2": {
+        "class": "socket",
+        "capabilities": [
+          "onoff"
+        ],
+        "icon": "{{driverAssetsPath}}/icon.svg",
+        "name": {
+          "en": "Input 2 (S2)",
+          "nl": "Ingang 2 (S2)"
+        },
+        "settings": []
+      }
+    }
+  }
+}

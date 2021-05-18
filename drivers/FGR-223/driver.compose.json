@@ -1,0 +1,40 @@
+{
+  "id": "FGR-223",
+  "name": {
+    "en": "Roller Shutter 3",
+    "nl": "Rolluik schakelaar 3"
+  },
+  "class": "windowcoverings",
+  "capabilities": [
+    "windowcoverings_set",
+    "measure_power",
+    "meter_power"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      771
+    ],
+    "productId": [
+      4096,
+      8192,
+      12288
+    ],
+    "learnmode": {
+      "image": "{{driverassetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the B-button on your {{driverNameEn}} three times.",
+        "nl": "Druk driemaal op de B-knop van uw {{driverNameNl}}."
+      }
+    },
+    "associationGroups": [
+      1,
+      2,
+      3
+    ]
+  }
+}

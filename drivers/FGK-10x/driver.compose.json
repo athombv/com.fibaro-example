@@ -1,0 +1,52 @@
+{
+  "name": {
+    "en": "Door/Window Sensor (Z-Wave plus)",
+    "nl": "Deur/Raam Sensor (Z-Wave plus)"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "alarm_contact",
+    "alarm_tamper",
+    "measure_temperature",
+    "measure_battery"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [ "LS14250" ]
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      1793
+    ],
+    "productId": [
+      4097,
+      8193,
+      12289,
+      16385,
+      20481,
+      24577,
+      28673,
+      32769,
+      36865,
+      40961,
+      45057
+    ],
+    "includeSecure": false,
+    "zwaveAllianceProductId": 1356,
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your Fibaro Door/Window Sensor three times",
+        "nl": "Druk driemaal op de knop op de Fibaro Deur/Raam Sensor"
+      }
+    },
+    "associationGroups": [
+      1,
+      2
+    ]
+  }
+}

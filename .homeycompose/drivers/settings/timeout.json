@@ -1,0 +1,17 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Timeout",
+    "nl": "Vertraging"
+  },
+  "value": 1,
+  "attr": {
+    "min": 0.5,
+    "max": 3,
+    "step": 0.1
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the maximum time between events before timeout.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de maximale tijd tussen acties voordat er een timeout plaatsvindt."
+  }
+}

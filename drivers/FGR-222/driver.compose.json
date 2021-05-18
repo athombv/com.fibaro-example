@@ -1,0 +1,38 @@
+{
+  "id": "FGR-222",
+  "name": {
+    "en": "Roller Shutter 2",
+    "nl": "Rolluik schakelaar 2"
+  },
+  "class": "windowcoverings",
+  "capabilities": [
+    "windowcoverings_set",
+    "measure_power",
+    "windowcoverings_state"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      770
+    ],
+    "productId": [
+      4096,
+      8192,
+      12288
+    ],
+    "learnmode": {
+      "image": "{{driverassetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the B-button on your {{driverNameEn}} three times.",
+        "nl": "Druk driemaal op de B-knop van uw {{driverNameNl}}."
+      }
+    },
+    "associationGroups": [
+      3
+    ]
+  }
+}

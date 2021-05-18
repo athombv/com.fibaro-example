@@ -1,0 +1,51 @@
+{
+  "id": "FGS-222",
+  "name": {
+    "en": "Double Relay Switch 2"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      514,
+      515
+    ],
+    "productId": [
+      4098,
+      8194,
+      12290,
+      16384
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your {{driverNameEn}} three times",
+        "nl": "Druk driemaal op de knop op de {{driverNameNl}}"
+      }
+    },
+    "associationGroups": [
+      3
+    ],
+    "multiChannelNodes": {
+      "2": {
+        "class": "socket",
+        "capabilities": [
+          "onoff"
+        ],
+        "icon": "{{driverAssetsPath}}/icon.svg",
+        "name": {
+          "en": "Relay 2 (S2 & Q2)",
+          "nl": "Relais 2 (S2 & Q2)"
+        },
+        "settings": []
+      }
+    }
+  }
+}

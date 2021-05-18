@@ -1,0 +1,17 @@
+{
+  "value": "3",
+  "label": {
+    "en": "Associations in Z-Wave network Security Mode",
+    "nl": "Associaties in Z-Wave netwerk Security Modus"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines how commands are sent in specified association groups: as secure or non-secure. Parameter is active only in Z-Wave network security mode.",
+    "nl": "Deze instelling ({{zwaveParameterIndex}}) bepaalt hoe commando's worden verstuurd naar de desbetreffende associatie groep: als beveiligd of niet-beveiligd."
+  },
+  "zwave": {
+    "index": 18,
+    "size": 1
+  },
+  "type": "dropdown",
+  "values": []
+}

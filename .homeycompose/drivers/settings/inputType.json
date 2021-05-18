@@ -1,0 +1,42 @@
+{
+  "type": "dropdown",
+  "label": {
+    "en": "Input type",
+    "nl": "Ingang type"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines what kind of input type is connected.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wat van ingang type er is aangesloten."
+  },
+  "value": "1",
+  "values": [
+    {
+      "id": "0",
+      "label": {
+        "en": "Normally open",
+        "nl": "Maakcontact"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Normally closed",
+        "nl": "Verbreekcontact"
+      }
+    },
+    {
+      "id": "2",
+      "label": {
+        "en": "Momentary switch",
+        "nl": "Pulsdrukschakelaar"
+      }
+    },
+    {
+      "id": "3",
+      "label": {
+        "en": "Toggle switch",
+        "nl": "Tuimelschakelaar"
+      }
+    }
+  ]
+}

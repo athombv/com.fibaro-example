@@ -1,0 +1,37 @@
+{
+  "id": "FGWOF-011",
+  "name": {
+    "en": "Walli Outlet",
+    "nl": "Walli Wandcontactdoos"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": 7937,
+    "productId": [
+      4096
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Connect the wall outlet to a power source and press the pair button on {{driverNameEn}} three times",
+        "nl": "Sluit de spanning aan op de wandcontactdoos en druk driemaal op de knop op van {{driverNameNl}}"
+      }
+    },
+    "associationGroups": [
+      1,
+      2
+    ],
+    "includeSecure": false,
+    "__comment": "Multichannel nodes don't work properly with secureInclusion due to Fibaro firmware issues"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff",
+    "measure_power",
+    "meter_power"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  }
+}

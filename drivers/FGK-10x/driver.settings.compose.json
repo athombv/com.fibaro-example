@@ -1,0 +1,207 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Contact sensor",
+      "nl": "Contact sensor"
+    },
+    "collapsed": false,
+    "children": [
+      {
+        "$extends": "operatingDevice",
+        "$id": "operation_mode",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Door/Window Sensor",
+              "nl": "Deur/Raam Sensor"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "External Switch",
+              "nl": "Externe Schakelaar"
+            }
+          }
+        ]
+      },
+      {
+        "$extends": "defaultPosition",
+        "$id": "default_alarm_status",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Door/Window Opened",
+              "nl": "Deur/Raam Geopend"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Door/Window Closed",
+              "nl": "Deur/Raam Gesloten"
+            }
+          }
+        ]
+      },
+      {
+        "$extends": "ledStyle",
+        "$id": "led_indication",
+        "zwave": {
+          "index": 3,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "No Indication",
+              "nl": "Geen Indicatie"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Status Changed",
+              "nl": "Status Veranderd"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "On Wakeup",
+              "nl": "Wakker Worden"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Status Changed & On Wakeup",
+              "nl": "Status Veranderd & Wakker Worden"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Tamper",
+              "nl": "Sabotage"
+            }
+          },
+          {
+            "id": "5",
+            "label": {
+              "en": "Status Changed & Tamper",
+              "nl": "Status Veranderd & Sabotage"
+            }
+          },
+          {
+            "id": "6",
+            "label": {
+              "en": "On Wakeup & Tamper",
+              "nl": "Wakker Worden & Sabotage"
+            }
+          },
+          {
+            "id": "7",
+            "label": {
+              "en": "Status Changed & On Wakeup & Tamper",
+              "nl": "Status Veranderd & Wakker Worden & Sabotage"
+            }
+          }
+        ],
+        "value": "6"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature sensor",
+      "nl": "Temperatuurssensor"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "measuringInterval",
+        "$id": "temperature_measure_interval",
+        "zwave": {
+          "index": 50,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 32400
+        },
+        "value": 300
+      },
+      {
+        "$extends": "reportThreshold",
+        "$id": "temperature_report_treshold",
+        "zwave": {
+          "index": 51,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 300
+        },
+        "value": 10
+      },
+      {
+        "$extends": "reportInterval",
+        "id": "temperature_report_interval",
+        "zwave": {
+          "index": 52,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 32400
+        },
+        "value": 0
+      },
+      {
+        "$extends": "offset",
+        "$id": "temperature_offset",
+        "zwave": {
+          "index": 66,
+          "size": 2
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Tamper alarm",
+      "nl": "Sabotage alarm"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "activateCancellation",
+        "$id": "tamper_cancellation",
+        "zwave": {
+          "index": 31,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "cancellationDelay",
+        "$id": "tamper_alarm_cancellation",
+        "zwave": {
+          "index": 30,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 32400
+        },
+        "value": 5
+      }
+    ]
+  }
+]

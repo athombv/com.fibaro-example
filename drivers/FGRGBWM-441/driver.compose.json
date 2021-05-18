@@ -1,0 +1,109 @@
+{
+  "id": "FGRGBWM-441",
+  "name": {
+    "en": "RGBW Controller"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "light_hue",
+    "light_mode",
+    "measure_power",
+    "meter_power",
+    "light_saturation",
+    "light_temperature",
+    "onoff",
+    "measure_voltage.input1",
+    "measure_voltage.input2",
+    "measure_voltage.input3",
+    "measure_voltage.input4"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": true
+    },
+    "measure_voltage.input1": {
+      "title": {
+        "en": "Input 1",
+        "nl": "Ingang 1"
+      }
+    },
+    "measure_voltage.input2": {
+      "title": {
+        "en": "Input 2",
+        "nl": "Ingang 2"
+      }
+    },
+    "measure_voltage.input3": {
+      "title": {
+        "en": "Input 3",
+        "nl": "Ingang 3"
+      }
+    },
+    "measure_voltage.input4": {
+      "title": {
+        "en": "Input 4",
+        "nl": "Ingang 4"
+      }
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      2304
+    ],
+    "productId": [
+      4096,
+      8192,
+      12288,
+      16384
+    ],
+    "zwaveAllianceProductId": 1054,
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on the {{driverNameEn}} three times.",
+        "nl": "Druk driemaal op de knop op de {{driverNameNl}}."
+      }
+    },
+    "associationGroups": [
+      5
+    ],
+    "associationGroupOptions": {
+      "1": {
+        "hint": {
+          "en": "On/off signals from input 1",
+          "nl": "Aan/uit signalen van ingang 1"
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "On/off signals from input 2",
+          "nl": "Aan/uit signalen van ingang 2"
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "On/off signals from input 3",
+          "nl": "Aan/uit signalen van ingang 3"
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "On/off signals from input 4",
+          "nl": "Aan/uit signalen van ingang 4"
+        }
+      },
+      "5": {
+        "hint": {
+          "en": "This is the controller group, it is not recommended to change this.",
+          "nl": "Dit is de controller groep, het is niet aangeraden deze te wijzigen."
+        }
+      }
+    }
+  }
+}

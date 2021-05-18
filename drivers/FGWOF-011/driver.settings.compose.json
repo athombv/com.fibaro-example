@@ -1,0 +1,267 @@
+[
+    {
+        "type": "group",
+        "label": {
+            "en": "On/off",
+            "nl": "Aan/uit"
+        },
+        "collapsed": false,
+        "children": [
+            {
+                "$extends": "saveState",
+                "$id": "save_state"
+            }
+        ]
+    },
+    {
+        "type": "group",
+        "label": {
+            "en": "LED notifications",
+            "nl": "LED notificaties"
+        },
+        "collapsed": true,
+        "children": [
+            {
+                "id": "led_ring_color_on",
+                "type": "dropdown",
+                "label": {
+                    "en": "Color when on",
+                    "nl": "Kleur wanneer aan"
+                },
+                "value": "8",
+                "hint": {
+                    "en": "This parameter ({{zwaveParameterIndex}}) defines the color of the LED ring in on state.",
+                    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de kleur van de LED ring wanneer dit apparaat aan staat."
+                },
+                "zwave": {
+                    "index": 11,
+                    "size": 1
+                },
+                "values": [
+                    {
+                        "id": "0",
+                        "label": {
+                            "en": "Off",
+                            "nl": "Uit"
+                        }
+                    },
+                    {
+                        "id": "1",
+                        "label": {
+                            "en": "White",
+                            "nl": "Wit"
+                        }
+                    },
+                    {
+                        "id": "2",
+                        "label": {
+                            "en": "Red",
+                            "nl": "Rood"
+                        }
+                    },
+                    {
+                        "id": "3",
+                        "label": {
+                            "en": "Green",
+                            "nl": "Groen"
+                        }
+                    },
+                    {
+                        "id": "4",
+                        "label": {
+                            "en": "Blue",
+                            "nl": "Blauw"
+                        }
+                    },
+                    {
+                        "id": "5",
+                        "label": {
+                            "en": "Yellow",
+                            "nl": "Geel"
+                        }
+                    },
+                    {
+                        "id": "6",
+                        "label": {
+                            "en": "Cyan",
+                            "nl": "Cyaan"
+                        }
+                    },
+                    {
+                        "id": "7",
+                        "label": {
+                            "en": "Magenta",
+                            "nl": "Magenta"
+                        }
+                    },
+                    {
+                        "id": "8",
+                        "label": {
+                            "en": "Changes continuously according to power load using full spectrum of LED color",
+                            "nl": "Verandert continu afhankelijk van het stroomverbruik"
+                        }
+                    },
+                    {
+                        "id": "9",
+                        "label": {
+                            "en": "Changes in predefined steps according to power load",
+                            "nl": "Verandert in stappen afhankelijk van het stroomverbuik"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "led_ring_color_off",
+                "type": "dropdown",
+                "label": {
+                    "en": "Color when off",
+                    "nl": "Kleur wanneer uit"
+                },
+                "value": "0",
+                "hint": {
+                    "en": "This parameter ({{zwaveParameterIndex}}) defines the color of the LED ring in off state.",
+                    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de kleur van de LED ring wanneer dit apparaat uit staat."
+                },
+                "zwave": {
+                    "index": 12,
+                    "size": 1
+                },
+                "values": [
+                    {
+                        "id": "0",
+                        "label": {
+                            "en": "Off",
+                            "nl": "Uit"
+                        }
+                    },
+                    {
+                        "id": "1",
+                        "label": {
+                            "en": "White",
+                            "nl": "Wit"
+                        }
+                    },
+                    {
+                        "id": "2",
+                        "label": {
+                            "en": "Red",
+                            "nl": "Rood"
+                        }
+                    },
+                    {
+                        "id": "3",
+                        "label": {
+                            "en": "Green",
+                            "nl": "Groen"
+                        }
+                    },
+                    {
+                        "id": "4",
+                        "label": {
+                            "en": "Blue",
+                            "nl": "Blauw"
+                        }
+                    },
+                    {
+                        "id": "5",
+                        "label": {
+                            "en": "Yellow",
+                            "nl": "Geel"
+                        }
+                    },
+                    {
+                        "id": "6",
+                        "label": {
+                            "en": "Cyan",
+                            "nl": "Cyaan"
+                        }
+                    },
+                    {
+                        "id": "7",
+                        "label": {
+                            "en": "Magenta",
+                            "nl": "Magenta"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "led_ring_brightness",
+                "type": "number",
+                "label": {
+                    "en": "LED Brightness",
+                    "nl": "LED Helderheid"
+                },
+                "hint": {
+                    "en": "This parameter ({{zwaveParameterIndex}}) defines the color of the LED ring in off state.",
+                    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de kleur van de LED ring wanneer dit apparaat uit staat."
+                },
+                "zwave": {
+                    "index": 13,
+                    "size": 1
+                },
+                "attr": {
+                    "min": 1,
+                    "max": 100
+                },
+                "value": 100
+            }
+        ]
+    },
+    {
+        "type": "group",
+        "label": {
+            "en": "Power (kWh)",
+            "nl": "Stroom (kWh)"
+        },
+        "collapsed": false,
+        "children": [
+            {
+                "id": "own_power",
+                "type": "checkbox",
+                "label": {
+                    "en": "Include own power consumption",
+                    "nl": "inclusief eigen verbruik"
+                },
+                "hint": {
+                    "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the kWh usage of the device itself is added to the power usage.",
+                    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het kWh verbruik van het apparaat bij het totaalverbruik wordt opgeteld."
+                },
+                "zwave": {
+                    "index": 60,
+                    "size": 1
+                },
+                "value": false
+            },
+            {
+                "$extends": "reportThreshold",
+                "$id": "kwh_report_threshold",
+                "zwave": {
+                    "index": 61,
+                    "size": 2,
+                    "signed": false
+                },
+                "attr": {
+                    "min": 0.01,
+                    "max": 5.12,
+                    "step": 0.01
+                },
+                "value": 0.1
+            },
+            {
+                "$extends": "reportInterval",
+                "$id": "watt_kwh_report_interval",
+                "zwave": {
+                    "index": 62,
+                    "size": 2,
+                    "signed": false
+                },
+                "attr": {
+                    "min": 1,
+                    "max": 65535
+                },
+                "value": 3600
+            }
+        ]
+    }
+]

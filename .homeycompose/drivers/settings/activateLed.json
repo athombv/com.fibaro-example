@@ -1,0 +1,16 @@
+{
+  "type": "checkbox",
+  "label": {
+    "en": "Enable LED notifications",
+    "nl": "Schakel LED notificaties in"
+  },
+  "zwave": {
+    "index": 2,
+    "size": 1
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) allows you to enable/disable LED indications.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of de LED indicatie is ingeschakeld."
+  },
+  "value": true
+}

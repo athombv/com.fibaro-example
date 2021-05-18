@@ -1,0 +1,46 @@
+{
+  "id": "FGSS-001",
+  "name": {
+    "en": "Smoke Sensor",
+    "nl": "Rookmelder"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_heat",
+    "alarm_smoke",
+    "alarm_tamper",
+    "measure_temperature"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [ "CR123A" ]
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      3072
+    ],
+    "productId": [
+      4096,
+      8192,
+      12288
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on the {{driverNameEn}} three times",
+        "nl": "Druk driemaal op de knop op de {{driverNameNl}}"
+      }
+    },
+    "zwaveAllianceProductId": 1049,
+    "associationGroups": [
+      1,
+      2,
+      3
+    ]
+  }
+}

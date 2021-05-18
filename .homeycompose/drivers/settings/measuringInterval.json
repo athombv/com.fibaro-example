@@ -1,0 +1,20 @@
+{
+  "value": 3600,
+  "label": {
+    "en": "Measuring interval (s)",
+    "nl": "Meet interval (s)"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the time between sensor measurements.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen het meten van sensorwaarden."
+  },
+  "zwave": {
+    "index": 42,
+    "size": 2
+  },
+  "attr": {
+    "min": 0,
+    "max": 32767
+  },
+  "type": "number"
+}

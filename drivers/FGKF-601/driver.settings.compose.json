@@ -1,0 +1,318 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Buttons",
+      "nl": "Knoppen"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "buttonScene",
+        "$id": "square_scenes",
+        "label": {
+          "en": "Square (□) button",
+          "nl": "Vierkante (□) knop"
+        },
+        "zwave": {
+          "index": 21,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "buttonScene",
+        "$id": "circle_scenes",
+        "label": {
+          "en": "Circle (○) button",
+          "nl": "Cirkel (○) knop"
+        },
+        "zwave": {
+          "index": 22,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "buttonScene",
+        "$id": "cross_scenes",
+        "label": {
+          "en": "Cross (x) button",
+          "nl": "Kruis (x) knop"
+        },
+        "zwave": {
+          "index": 23,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "buttonScene",
+        "$id": "triangle_scenes",
+        "label": {
+          "en": "Triangle (△) button",
+          "nl": "Driehoek (△) knop"
+        },
+        "zwave": {
+          "index": 24,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "buttonScene",
+        "$id": "minus_scenes",
+        "label": {
+          "en": "Minus (-) button",
+          "nl": "Min (-) knop"
+        },
+        "zwave": {
+          "index": 25,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "buttonScene",
+        "$id": "plus_scenes",
+        "label": {
+          "en": "Plus (+) button",
+          "nl": "Plus (+) knop"
+        },
+        "zwave": {
+          "index": 26,
+          "size": 1
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Sequences",
+      "nl": "Reeksen"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "timeout",
+        "$id": "sequence_timeout",
+        "zwave": {
+          "index": 9,
+          "size": 1
+        }
+      },
+      {
+        "id": "lock_timeout",
+        "type": "number",
+        "label": {
+          "en": "Time till lock",
+          "nl": "Tijd tot vergrendeling"
+        },
+        "value": 1,
+        "attr": {
+          "min": 0,
+          "max": 1791
+        },
+        "zwave": {
+          "index": 2,
+          "size": 2
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the time of inactivity after which the device will lock itself.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt hoe lang het apparaat inactief moet zijn voordat deze vergrendeld word."
+        }
+      },
+      {
+        "$extends": "buttonSequence",
+        "$id": "sequence_lock",
+        "label": {
+          "en": "Lock sequence",
+          "nl": "Vergrendel reeks"
+        },
+        "zwave": {
+          "index": 1,
+          "size": 2,
+          "signed": false
+        }
+      },
+      {
+        "$extends": "buttonSequence",
+        "$id": "sequence_1",
+        "zwave": {
+          "index": 3,
+          "size": 2,
+          "signed": false
+        }
+      },
+      {
+        "$extends": "buttonSequence",
+        "$id": "sequence_2",
+        "zwave": {
+          "index": 4,
+          "size": 2,
+          "signed": false
+        }
+      },
+      {
+        "$extends": "buttonSequence",
+        "$id": "sequence_3",
+        "zwave": {
+          "index": 5,
+          "size": 2,
+          "signed": false
+        }
+      },
+      {
+        "$extends": "buttonSequence",
+        "$id": "sequence_4",
+        "zwave": {
+          "index": 6,
+          "size": 2,
+          "signed": false
+        }
+      },
+      {
+        "$extends": "buttonSequence",
+        "$id": "sequence_5",
+        "zwave": {
+          "index": 7,
+          "size": 2,
+          "signed": false
+        }
+      },
+      {
+        "$extends": "buttonSequence",
+        "$id": "sequence_6",
+        "zwave": {
+          "index": 8,
+          "size": 2,
+          "signed": false
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Association Group Button Values",
+      "nl": "Associatie Groep Knop Waarden"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "id": "group_operating_mode",
+        "type": "dropdown",
+        "label": {
+          "en": "Association groups operating mode",
+          "nl": "Associatie groepen besturingsmodus"
+        },
+        "zwave": {
+          "index": 10,
+          "size": 1
+        },
+        "value": "0",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Single press: toggle state",
+              "nl": "Eenmaal drukken: schakel status"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Single press: toggle state, double press: full brightness",
+              "nl": "Eenmaal drukken: schakel status, tweemaal drukken: volle helderheid"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Single press: turn on, double press: turn off",
+              "nl": "Eenmaal drukken: schakel aan, tweemaal drukken: sckakel uit"
+            }
+          }
+        ],
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the behaviour of the {{driverNameEn}} with regard to its association groups.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag van de {{driverNameNl}} met betrekking tot zijn associatie groepen."
+        }
+      },
+      {
+        "$extends": "valueGroup",
+        "$id": "value_group_square",
+        "label": {
+          "en": "Group 2 and 3 (□)",
+          "nl": "Groep 2 en 3 (□)"
+        },
+        "zwave": {
+          "index": 11,
+          "size": 2,
+          "signed": false
+        }
+      },
+      {
+        "$extends": "valueGroup",
+        "$id": "value_group_circle",
+        "label": {
+          "en": "Group 4 and 5 (○)",
+          "nl": "Groep 4 en 5 (○)"
+        },
+        "zwave": {
+          "index": 12,
+          "size": 2,
+          "signed": false
+        }
+      },
+      {
+        "$extends": "valueGroup",
+        "$id": "value_group_cross",
+        "label": {
+          "en": "Group 6 and 7 (x)",
+          "nl": "Groep 6 en 7 (x)"
+        },
+        "zwave": {
+          "index": 13,
+          "size": 2,
+          "signed": false
+        }
+      },
+      {
+        "$extends": "valueGroup",
+        "$id": "value_group_triangle",
+        "label": {
+          "en": "Group 8 and 9 (△)",
+          "nl": "Groep 8 en 9 (△)"
+        },
+        "zwave": {
+          "index": 14,
+          "size": 2,
+          "signed": false
+        }
+      },
+      {
+        "$extends": "valueGroup",
+        "$id": "value_group_minus",
+        "label": {
+          "en": "Group 10 and 11 (-)",
+          "nl": "Groep 10 en 11 (-)"
+        },
+        "zwave": {
+          "index": 15,
+          "size": 2,
+          "signed": false
+        }
+      },
+      {
+        "$extends": "valueGroup",
+        "$id": "value_group_plus",
+        "label": {
+          "en": "Group 12 and 13 (+)",
+          "nl": "Groep 12 en 13 (+)"
+        },
+        "zwave": {
+          "index": 16,
+          "size": 2,
+          "signed": false
+        }
+      }
+    ]
+  }
+]

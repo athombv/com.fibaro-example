@@ -1,0 +1,195 @@
+{
+  "actions": [
+    {
+      "id": "walli_switch_turn_on",
+      "title": {
+        "en": "Turn on",
+        "nl": "Zet aan"
+      },
+      "args": [
+        {
+          "name": "output",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Output 1",
+                "nl": "Uitgang 1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Output 2",
+                "nl": "Uitgang 2"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "walli_switch_turn_off",
+      "title": {
+        "en": "Turn off",
+        "nl": "Zet uit"
+      },
+      "args": [
+        {
+          "name": "output",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Output 1",
+                "nl": "Uitgang 1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Output 2",
+                "nl": "Uitgang 2"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "walli_switch_toggle",
+      "title": {
+        "en": "Toggle on or off",
+        "nl": "Schakel aan of uit"
+      },
+      "args": [
+        {
+          "name": "output",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Output 1",
+                "nl": "Uitgang 1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Output 2",
+                "nl": "Uitgang 2"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "triggers": [
+    {
+      "id": "walli_switch_power_changed",
+      "title": {
+        "en": "Power use changed",
+        "nl": "Energieverbruik veranderd"
+      },
+      "args": [
+        {
+          "name": "output",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Output 1",
+                "nl": "Uitgang 1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Output 2",
+                "nl": "Uitgang 2"
+              }
+            }
+          ]
+        }
+      ],
+      "tokens": [
+        {
+          "name": "power",
+          "type": "number",
+          "title": {
+            "en": "Watt"
+          },
+          "example": 25
+        }
+      ]
+    },
+    {
+      "id": "walli_switch_button_scenes",
+      "title": {
+        "en": "Button scenes",
+        "nl": "Knoppen scenes"
+      },
+      "args": [
+        {
+          "name": "button",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Button 1",
+                "nl": "Knop 1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Button 2",
+                "nl": "Knop 2"
+              }
+            }
+          ]
+        },
+        {
+          "name": "presses",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "1x",
+                "nl": "1x"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "2x",
+                "nl": "2x"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "3x",
+                "nl": "3x"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Hold",
+                "nl": "Vasthouden"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

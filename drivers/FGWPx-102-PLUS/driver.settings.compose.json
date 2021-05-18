@@ -1,0 +1,356 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Power",
+      "nl": "Stroom"
+    },
+    "collapsed": false,
+    "children": [
+      {
+        "$extends": "alwaysOn",
+        "$id": "always_on"
+      },
+      {
+        "$extends": "saveState",
+        "$id": "save_state",
+        "zwave": {
+          "index": 2,
+          "size": 1
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power (W)",
+      "nl": "Stroom (W)"
+    },
+    "collapsed": false,
+    "children": [
+      {
+        "$extends": "reportInterval",
+        "$id": "watt_interval_report",
+        "zwave": {
+          "index": 12,
+          "size": 2
+        },
+        "attr": {
+          "min": 5,
+          "max": 600
+        },
+        "value": 30
+      },
+      {
+        "$extends": "reportThreshold",
+        "$id": "watt_threshold_report",
+        "zwave": {
+          "index": 11,
+          "size": 1
+        },
+        "attr": {
+          "min": 1,
+          "max": 100
+        },
+        "value": 15
+      },
+      {
+        "$extends": "reportThreshold",
+        "$id": "immediate_watt_percent_report",
+        "label": {
+          "en": "Report percentage threshold",
+          "nl": "Procentuele rapportage drempel" 
+        },
+        "zwave": {
+          "index": 10,
+          "size": 1
+        },
+        "attr": {
+          "min": 1,
+          "max": 100
+        },
+        "value": 80
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power (kWh)",
+      "nl": "Stroom (kWh)"
+    },
+    "collapsed": false,
+    "children": [
+      {
+        "id": "own_power",
+        "type": "checkbox",
+        "label": {
+          "en": "Include own power consumption",
+          "nl": "inclusief eigen verbruik"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the kWh usage of the device itself is added to the power usage.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het kWh verbruik van het apparaat bij het totaalverbruik wordt opgeteld."
+        },
+        "zwave": {
+          "index": 15,
+          "size": 1
+        },
+        "value": false
+      },
+      {
+        "$extends": "reportThreshold",
+        "$id": "kwh_threshold_report",
+        "zwave": {
+          "index": 13,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 5,
+          "step": 0.01
+        },
+        "value": 0.01
+      },
+      {
+        "$extends": "reportInterval",
+        "$id": "watt_kwh_report_interval",
+        "zwave": {
+          "index": 14,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 32400
+        },
+        "value": 3600
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "LED Notifications",
+      "nl": "LED Notificaties"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "id": "led_ring_color_on",
+        "type": "dropdown",
+        "label": {
+          "en": "Color when on",
+          "nl": "Kleur wanneer aan"
+        },
+        "zwave": {
+          "index": 41,
+          "size": 1
+        },
+        "value": "1",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the color of the LED ring in on state.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de kleur van de LED ring wanneer het apparaat aan staat."
+        },
+        "values": [
+          {
+            "id": "1",
+            "label": {
+              "en": "Changes in predefined steps according to power load",
+              "nl": "Verandert in stappen afhankelijk van het stroomverbuik"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Changes continuously according to power load using full spectrum of LED color",
+              "nl": "Verandert continu afhankelijk van het stroomverbruik"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "White",
+              "nl": "Wit"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Red",
+              "nl": "Rood"
+            }
+          },
+          {
+            "id": "5",
+            "label": {
+              "en": "Green",
+              "nl": "Groen"
+            }
+          },
+          {
+            "id": "6",
+            "label": {
+              "en": "Blue",
+              "nl": "Blauw"
+            }
+          },
+          {
+            "id": "7",
+            "label": {
+              "en": "Yellow",
+              "nl": "Geel"
+            }
+          },
+          {
+            "id": "8",
+            "label": {
+              "en": "Cyan",
+              "nl": "Cyaan"
+            }
+          },
+          {
+            "id": "9",
+            "label": {
+              "en": "Magenta",
+              "nl": "Magenta"
+            }
+          },
+          {
+            "id": "0",
+            "label": {
+              "en": "Off",
+              "nl": "Uit"
+            }
+          }
+        ]
+      },
+      {
+        "id": "led_ring_color_off",
+        "type": "dropdown",
+        "label": {
+          "en": "Color when off",
+          "nl": "Kleur wanneer uit"
+        },
+        "zwave": {
+          "index": 42,
+          "size": 1
+        },
+        "value": "0",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the color of the LED ring in off state.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de kleur van de LED ring wanneer het apparaat uit staat."
+        },
+        "values": [
+          {
+            "id": "1",
+            "label": {
+              "en": "LED ring is illuminated with a color corresponding to the last measured power, before the controlled device was turned off.",
+              "nl": "LED ring is verlicht met een kleur die bij het laatst gemeten stroomverbruik hoort."
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "White",
+              "nl": "Wit"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Red",
+              "nl": "Rood"
+            }
+          },
+          {
+            "id": "5",
+            "label": {
+              "en": "Green",
+              "nl": "Groen"
+            }
+          },
+          {
+            "id": "6",
+            "label": {
+              "en": "Blue",
+              "nl": "Blauw"
+            }
+          },
+          {
+            "id": "7",
+            "label": {
+              "en": "Yellow",
+              "nl": "Geel"
+            }
+          },
+          {
+            "id": "8",
+            "label": {
+              "en": "Cyan",
+              "nl": "Cyaan"
+            }
+          },
+          {
+            "id": "9",
+            "label": {
+              "en": "Magenta",
+              "nl": "Magenta"
+            }
+          },
+          {
+            "id": "0",
+            "label": {
+              "en": "Off",
+              "nl": "Uit"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Associations",
+      "nl": "Associaties"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "id": "control_onoff_group2",
+        "type": "dropdown",
+        "label": {
+          "en": "Control association group 2",
+          "nl": "Controller associatie groep 2"
+        },
+        "zwave": {
+          "index": 20,
+          "size": 1
+        },
+        "value": "0",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the behaviour of the devices associated to group 2 when the B-button is pressed.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag van de apparaten in associatie groep 2 wanneer de B-knop ingedrukt word."
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "{{driverNameEn}} off, device(s) also off. {{driverNameEn}} on, device(s) also on",
+              "nl": "{{driverNameNl}} uit, apparaat(en) ook uit. {{driverNameNl}} aan, apparaat(en) ook aan"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "{{driverNameEn}} off, device(s) on. {{driverNameEn}} on, device(s) off",
+              "nl": "{{driverNameNl}} uit, apparaat(en) aan. {{driverNameNl}} aan, apparaat(en) uit"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

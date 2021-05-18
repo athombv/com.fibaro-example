@@ -1,0 +1,58 @@
+{
+    "id": "FGS-223_S1",
+    "title": {
+      "en": "Left Switch Scene (S1)",
+      "nl": "Linker Schakelaar Scene (S1)"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": {
+          "driver_id": "FGS-223",
+          "flags": "zwaveRoot"
+        }
+      },
+      {
+        "name": "scene",
+        "type": "dropdown",
+        "values": [
+          {
+            "id": "Key Pressed 1 time",
+            "label": {
+              "en": "Pressed/switched 1x",
+              "nl": "1x Ingedrukt/geschakeld"
+            }
+          },
+          {
+            "id": "Key Pressed 2 times",
+            "label": {
+              "en": "Pressed/switched 2x",
+              "nl": "2x Ingedrukt/geschakeld"
+            }
+          },
+          {
+            "id": "Key Pressed 3 times",
+            "label": {
+              "en": "Pressed/switched 3x",
+              "nl": "3x Ingedrukt/geschakeld"
+            }
+          },
+          {
+            "id": "Key Held Down",
+            "label": {
+              "en": "Hold switch",
+              "nl": "Lang ingedrukt"
+            }
+          },
+          {
+            "id": "Key Released",
+            "label": {
+              "en": "Hold released",
+              "nl": "Lang ingedrukt los gelaten"
+            }
+          }
+        ]
+      }
+    ]
+  }

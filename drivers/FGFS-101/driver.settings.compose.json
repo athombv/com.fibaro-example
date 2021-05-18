@@ -1,0 +1,430 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Flood sensor",
+      "nl": "Overstromingssensor"
+    },
+    "collapsed": false,
+    "children": [
+      {
+        "$extends": "activateSensor",
+        "$id": "flood_sensor",
+        "zwave": {
+          "index": 77,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "activateCancellation",
+        "$id": "alarm_cancel_status",
+        "zwave": {
+          "index": 9,
+          "size": 1
+        }
+      },
+      {
+        "id": "flood_signal",
+        "type": "dropdown",
+        "label": {
+          "en": "Flood signal",
+          "nl": "Overstroming signaal"
+        },
+        "hint": {
+          "en": "This parameter (2) determines which visual and acoustig alarms go of when a flood is detected.",
+          "nl": "Deze parameter (2) bepaalt welke visuele en akoestische alarmen af gaan bij water detectie."
+        },
+        "zwave": {
+          "index": 2,
+          "size": 1
+        },
+        "value": "3",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "None",
+              "nl": "Geen"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Visual",
+              "nl": "Visueel"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Acoustic",
+              "nl": "Akoestisch"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Acoustic and visual",
+              "nl": "Akoestisch en visueel"
+            }
+          }
+        ]
+      },
+      {
+        "$extends": "signalCancellationDelay",
+        "$id": "alarm_duration",
+        "zwave": {
+          "index": 75,
+          "size": 2,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 65535
+        },
+        "value": 0
+      },
+      {
+        "$extends": "cancellationDelay",
+        "$id": "alarm_cancellation",
+        "zwave": {
+          "index": 1,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 3600
+        },
+        "value": 0
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature sensor",
+      "nl": "Temperatuursensor"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "measuringInterval",
+        "$id": "temperature_measure_interval",
+        "zwave": {
+          "index": 10,
+          "size": 2,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 65535
+        },
+        "value": 300
+      },
+      {
+        "$extends": "reportThreshold",
+        "$id": "temperature_measure_hysteresis",
+        "zwave": {
+          "index": 12,
+          "size": 2
+        },
+        "attr": {
+          "min": 1,
+          "max": 100,
+          "steps": 0.1
+        },
+        "value": 5
+      },
+      {
+        "$extends": "offset",
+        "$id": "temperature_measure_offset",
+        "zwave": {
+          "index": 73,
+          "size": 2
+        },
+        "attr": {
+          "min": -10000,
+          "max": 10000,
+          "steps": 0.1
+        },
+        "value": 0
+      },
+      {
+        "$extends": "lowThreshold",
+        "$id": "low_temperature_treshold",
+        "zwave": {
+          "index": 50,
+          "size": 2
+        },
+        "attr": {
+          "min": -10000,
+          "max": 10000,
+          "steps": 0.1
+        },
+        "value": 1500
+      },
+      {
+        "$extends": "highThreshold",
+        "$id": "high_temperature_treshold",
+        "zwave": {
+          "index": 51,
+          "size": 2
+        },
+        "attr": {
+          "min": -10000,
+          "max": 10000,
+          "steps": 0.1
+        },
+        "value": 3500
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Tamper alarm",
+      "nl": "Sabotage alarm"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "id": "tamper_alarm",
+        "type": "dropdown",
+        "label": {
+          "en": "Tamper alarm",
+          "nl": "Sabotage alarm"
+        },
+        "hint": {
+          "en": "This parameter (74) determines when the tamper alarm is sent.",
+          "nl": "Deze parameter (74) bepaalt wanneer het sabotage alarm afgaat."
+        },
+        "zwave": {
+          "index": 74,
+          "size": 1
+        },
+        "value": "2",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Tamper alarm off",
+              "nl": "Sabotage alarm uit"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Tamper alarm when removed from surface",
+              "nl": "Sabotage alarm bij demontage"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Tamper alarm on movement",
+              "nl": "Sabotage alarm bij beweging"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Both options",
+              "nl": "Beide opties"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Visual and acoustic nofitications",
+      "nl": "Visuele en acoestische notificaties"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "id": "low_temperature_led",
+        "type": "dropdown",
+        "label": {
+          "en": "Low temperature LED",
+          "nl": "Temperatuur laag LED"
+        },
+        "hint": {
+          "en": "This parameter (61) determines which colour the low temperature alarm LED indication displays.",
+          "nl": "Deze parameter (61) bepaalt de kleur van de LED wanneer het lage temperatuuralarm afgaat."
+        },
+        "zwave": {
+          "index": 61,
+          "size": 4
+        },
+        "value": "255",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "LED Off",
+              "nl": "LED Uit"
+            }
+          },
+          {
+            "id": "16711680",
+            "label": {
+              "en": "Red",
+              "nl": "Rood"
+            }
+          },
+          {
+            "id": "65280",
+            "label": {
+              "en": "Green",
+              "nl": "Groen"
+            }
+          },
+          {
+            "id": "255",
+            "label": {
+              "en": "Blue",
+              "nl": "Blauw"
+            }
+          },
+          {
+            "id": "16776960",
+            "label": {
+              "en": "Yellow",
+              "nl": "Geel"
+            }
+          },
+          {
+            "id": "65535",
+            "label": {
+              "en": "Cyan",
+              "nl": "Cyaan"
+            }
+          },
+          {
+            "id": "16750848",
+            "label": {
+              "en": "Orange",
+              "nl": "Oranje"
+            }
+          },
+          {
+            "id": "16777215",
+            "label": {
+              "en": "White",
+              "nl": "Wit"
+            }
+          }
+        ]
+      },
+      {
+        "id": "high_temperature_led",
+        "type": "dropdown",
+        "label": {
+          "en": "High temperature LED",
+          "nl": "Temperatuur hoog LED"
+        },
+        "hint": {
+          "en": "This parameter (62) determines which colour the high temperature alarm LED indication displays.",
+          "nl": "Deze parameter (62) bepaalt de kleur van de LED wanneer het hoge temperatuuralarm afgaat."
+        },
+        "zwave": {
+          "index": 62,
+          "size": 4
+        },
+        "value": "255",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "LED Off",
+              "nl": "LED Uit"
+            }
+          },
+          {
+            "id": "16711680",
+            "label": {
+              "en": "Red",
+              "nl": "Rood"
+            }
+          },
+          {
+            "id": "65280",
+            "label": {
+              "en": "Green",
+              "nl": "Groen"
+            }
+          },
+          {
+            "id": "255",
+            "label": {
+              "en": "Blue",
+              "nl": "Blauw"
+            }
+          },
+          {
+            "id": "16776960",
+            "label": {
+              "en": "Yellow",
+              "nl": "Geel"
+            }
+          },
+          {
+            "id": "65535",
+            "label": {
+              "en": "Cyan",
+              "nl": "Cyaan"
+            }
+          },
+          {
+            "id": "16750848",
+            "label": {
+              "en": "Orange",
+              "nl": "Oranje"
+            }
+          },
+          {
+            "id": "16777215",
+            "label": {
+              "en": "White",
+              "nl": "Wit"
+            }
+          }
+        ]
+      },
+      {
+        "$extends": "ledTriggers",
+        "$id": "led_indication",
+        "zwave": {
+          "index": 63,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "LED doesn't indicate",
+              "nl": "LED geeft niet weer"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "LED blinks every measurement",
+              "nl": "LED knippert bij elke meting"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "LED always on (when constantly powered)",
+              "nl": "LED geeft altijd weer (onder constante spanning"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

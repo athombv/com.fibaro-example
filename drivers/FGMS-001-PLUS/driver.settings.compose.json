@@ -1,0 +1,547 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Motion sensor",
+      "nl": "Bewegingssensor"
+    },
+    "collapsed": false,
+    "children": [
+      {
+        "$extends": "sensitivity",
+        "$id": "motion_sensor_sensitivity"
+      },
+      {
+        "id": "motion_sensor_blindtime",
+        "type": "number",
+        "label": {
+          "en": "Motion sensor blindtime",
+          "nl": "Bewegingssensor blindtime"
+        },
+        "zwave": {
+          "index": 2,
+          "size": 1
+        },
+        "value": 15,
+        "attr": {
+          "min": 0,
+          "max": 15
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the period of time through which the PIR sensor is “blind” (insensitive) to motion.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de periode na detecteren van beweging gedurende de sensor ongevoelig is voor nieuwe bewegingsdetectie."
+        }
+      },
+      {
+        "id": "motion_pulse_counter",
+        "value": "1",
+        "label": {
+          "en": "Motion detection pulse counter",
+          "nl": "Bewegingsdetectie pulse teller"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the number of times motion is detected before motion is reported. A higher value results in a less sensitive motion sensor.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de hoeveelheid bewegingen voordat dit wordt gerapporteert, een hogere waarde resulteert in een minder gevoelige sensor."
+        },
+        "zwave": {
+          "index": 3,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "1 pulse",
+              "nl": "1 beweging"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "2 pulse",
+              "nl": "2 bewegingen"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "3 pulse",
+              "nl": "3 bewegingen"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "4 pulse",
+              "nl": "4 bewegingen"
+            }
+          }
+        ],
+        "type": "dropdown"
+      },
+      {
+        "id": "motion_detection_time_window",
+        "value": "2",
+        "label": {
+          "en": "Motion detection time window",
+          "nl": "Tijdvak voor bewegingsdetectie"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the period of time in which the number of moves set in the \"Motion pulse counter\" must be reported. A higher value results in a more sensitive motion sensor. It is not recommended to modify this setting.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het tijdvak waarin de bewegingen aangegeven in de \"Bewegingsdetectie pulse teller\" instelling moeten worden gerapporteerd. Een hogere waarde resulteert in een gevoeligere sensor. Het is afgeraden om deze instelling aan te passen."
+        },
+        "zwave": {
+          "index": 4,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "4 seconds"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "8 seconds"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "12 seconds"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "16 seconds"
+            }
+          }
+        ],
+        "type": "dropdown"
+      },
+      {
+        "$extends": "cancellationDelay",
+        "$id": "motion_cancellation_delay"
+      },
+      {
+        "id": "day_night",
+        "value": "0",
+        "label": {
+          "en": "Motion operating mode",
+          "nl": "Bewegingsalarm functie"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines when the motion should be active.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wanneer het bewegingsalarm actief moet zijn."
+        },
+        "zwave": {
+          "index": 8,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Always active",
+              "nl": "Altijd actief"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Only during day",
+              "nl": "Alleen overdag"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Only during night",
+              "nl": "Alleen 's nachts"
+            }
+          }
+        ],
+        "type": "dropdown"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature sensor",
+      "nl": "Temperatuurssensor"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "reportThreshold",
+        "$id": "temperature_report_threshold",
+        "zwave": {
+          "index": 60,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 255
+        },
+        "value": 10
+      },
+      {
+        "$extends": "measuringInterval",
+        "$id": "temperature_measure_interval",
+        "zwave": {
+          "index": 62,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 32767
+        },
+        "value": 900
+      },
+      {
+        "$extends": "reportInterval",
+        "$id": "temperature_report_interval",
+        "zwave": {
+          "index": 64,
+          "size": 2
+        },
+        "value": 0
+      },
+      {
+        "$extends": "offset",
+        "$id": "temperature_offset"
+      },
+      {
+        "id": "temperature_blue",
+        "value": 18,
+        "label": {
+          "en": "Temperature for blue LED (°C)",
+          "nl": "Temperatuur voor blauwe LED (°C)"
+        },
+        "hint": {
+          "en": "The parameter ({{zwaveParameterIndex}}) is relevant only when LED signaling mode is set to 'depends on temperature'. Any temperature at or below this value will set the LED to blue, above this value it will gradually change to red.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) is alleen relevant wanneer LED kleur modus staat ingesteld op 'op basis van temperatuur'. Als de temperatuur lager of gelijk aan deze waarde is licht de LED blauw op, boven deze waarde wordt de LED geleidelijk roder."
+        },
+        "zwave": {
+          "index": 86,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 255
+        },
+        "type": "number"
+      },
+      {
+        "id": "temperature_red",
+        "value": 28,
+        "label": {
+          "en": "Temperature for red LED (°C)",
+          "nl": "Temperatuur voor rode LED (°C)"
+        },
+        "hint": {
+          "en": "The parameter ({{zwaveParameterIndex}}) is relevant only when LED signaling mode is set to 'depends on temperature'.  Any temperature at or above this value will set the LED to red, below this value it will gradually change to blue.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) is alleen relevant wanneer LED kleur modus staat ingesteld op 'op basis van temperatuur'. Als de temperatuur hoger of gelijk aan deze waarde is licht de LED rood op, onder deze waarde wordt de LED geleidelijk blauwer."
+        },
+        "zwave": {
+          "index": 87,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 255
+        },
+        "type": "number"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Light sensor",
+      "nl": "Lichtsensor"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "reportThreshold",
+        "$id": "illumination_report_threshold"
+      },
+      {
+        "$extends": "reportInterval",
+        "$id": "illumination_report_interval"
+      },
+      {
+        "id": "day_night_threshold",
+        "value": 200,
+        "label": {
+          "en": "Motion operating mode threshold",
+          "nl": "Bewegingsalarm functie drempel"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines on which lux level it is either day or night.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de hoeveel lux waarbij het schakelt tussen dag of nacht."
+        },
+        "zwave": {
+          "index": 9,
+          "size": 2
+        },
+        "attr": {
+          "min": 1,
+          "max": 32767
+        },
+        "type": "number"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Tamper alarm",
+      "nl": "Sabotage alarm"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "activateLed",
+        "$id": "led_indicating_tamper_alarm",
+        "zwave": {
+          "index": 89,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "sensitivity",
+        "$id": "tamper_sensitivity",
+        "zwave": {
+          "index": 20,
+          "size": 1
+        },
+        "attr": {
+          "min": 0,
+          "max": 121
+        },
+        "value": 20
+      },
+      {
+        "$extends": "cancellationDelay",
+        "$id": "tamper_cancellation_delay",
+        "zwave": {
+          "index": 22,
+          "size": 2
+        }
+      },
+      {
+        "id": "tamper_operating_mode",
+        "value": "0",
+        "label": {
+          "en": "Tamper operation mode",
+          "nl": "Trilling operatie modus"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the behaviour of the tamper alarm and how it reports.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag van het sabotage alarm en hoe het rapporteert."
+        },
+        "zwave": {
+          "index": 24,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Tamper only",
+              "nl": "Alleen sabotage alarm"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Tamper and earthquake detector",
+              "nl": "Sabotage en aardbeving detectie"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Tamper and orientation in space",
+              "nl": "Sabotage en orientatie raportage"
+            }
+          }
+        ],
+        "type": "dropdown"
+      },
+      {
+        "$extends": "activateCancellation",
+        "$id": "tamper_cancellation"
+      },
+      {
+        "id": "tamper_broadcast_mode",
+        "value": false,
+        "label": {
+          "en": "Tamper broadcast mode"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not tamper alarms are send in broadcast mode.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of de sabotage alarm meldingen worden verstuurt in broadcast modus."
+        },
+        "zwave": {
+          "index": 28,
+          "size": 1
+        },
+        "type": "checkbox"
+      },
+      {
+        "id": "tamper_broadcast_mode_backward_compatible",
+        "value": false,
+        "label": {
+          "en": "Tamper - backward compatible broadcast mode"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not tamper alarms are send in broadcast mode. (Backwards compatibility mode).",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of de sabotage alarm meldingen worden verstuurt in broadcast modus. (Backwards compatibility modus)."
+        },
+        "zwave": {
+          "index": 29,
+          "size": 1
+        },
+        "type": "checkbox"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "LED notifications",
+      "nl": "LED notificaties"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "ledStyle",
+        "$id": "led_signaling_mode"
+      },
+      {
+        "$extends": "ledBrightness",
+        "$id": "led_brightness"
+      },
+      {
+        "$extends": "lowLedBrightness",
+        "$id": "led_ambient_1",
+        "zwave": {
+          "index": 82,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 32767
+        }
+      },
+      {
+        "$extends": "highLedBrightness",
+        "$id": "led_ambient_100",
+        "zwave": {
+          "index": 83,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 32767
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Commands",
+      "nl": "Commando's"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "commandConfiguration",
+        "$id": "basic_command_config",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "On and off",
+              "nl": "Aan en uit"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Only on",
+              "nl": "Alleen aan"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Only off",
+              "nl": "Alleen uit"
+            }
+          }
+        ]
+      },
+      {
+        "$extends": "commandActivated",
+        "$id": "basic_on_command"
+      },
+      {
+        "$extends": "commandDeactivated",
+        "$id": "basic_off_command"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Associations",
+      "nl": "Associaties"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "associationSecureMode",
+        "$id": "secure_mode_associations",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "None of the groups are sent as secure",
+              "nl": "Geen van de groepen wordt beveiligd verstuurd"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Association group 2, on/off sent as secure",
+              "nl": "Associatie groep 2, aan/uit wordt beveiligd verstuurd"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Association group 3, tamper sent as secure",
+              "nl": "Associatie groep 3, trilling wordt beveiligd verstuurd"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Association group 2 and 3 sent as secure (on/off and tamper)",
+              "nl": "Associatie groep 2 en 3 worden beveiligd verstuurd (aan/uit and trilling)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

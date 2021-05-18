@@ -1,0 +1,147 @@
+[
+  {
+    "$extends": "saveState",
+    "id": "9",
+    "zwave": {
+      "index": 9,
+      "size": 1
+    }
+  },
+  {
+    "$extends": "operatingDevice",
+    "id": "20",
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what kind of switch is attached to the module.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type schakelaar is verbonden aan de module."
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Momentary Switch",
+          "nl": "Korstondige schakelaar"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Toggle switch (Persistent positions)",
+          "nl": "Tuimel schakelaar (Vaste posities)"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Toggle switch (Toggle status on position change)",
+          "nl": "Tuimel schakelaar (Verander status bij elke positieverandering)"
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power",
+      "nl": "Stroom"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "reportInterval",
+        "id": "58",
+        "zwave": {
+          "index": 58,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 32000
+        },
+        "value": 3600
+      },
+      {
+        "$extends": "reportThreshold",
+        "id": "50",
+        "zwave": {
+          "index": 50,
+          "size": 1
+        },
+        "attr": {
+          "min": 0,
+          "max": 100
+        },
+        "value": 20
+      },
+      {
+        "id": "51",
+        "type": "number",
+        "label": {
+          "en": "Minimum time between wattage reports",
+          "nl": "Minimale tijd tussen wattage verzending"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the minimum time between reports sent to Homey.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de minimum tijd tussen rapportages naar Homey."
+        },
+        "zwave": {
+          "index": 51,
+          "size": 1
+        },
+        "attr": {
+          "min": 0,
+          "max": 120
+        },
+        "value": 10
+      },
+      {
+        "$extends": "reportInterval",
+        "id": "59",
+        "zwave": {
+          "index": 59,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 32000
+        },
+        "value": 3600
+      },
+      {
+        "$extends": "reportThreshold",
+        "id": "53",
+        "zwave": {
+          "index": 53,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 320,
+          "step": 0.01
+        },
+        "value": 1
+      },
+      {
+        "id": "60",
+        "type": "checkbox",
+        "label": {
+          "en": "Include own power consumption",
+          "nl": "inclusief eigen verbruik"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the power usage of this device is included in the kWh reports.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het stroomverbruik van dit apparaat meegenomen wordt in de kWh rapportages."
+        },
+        "zwave": {
+          "index": 60,
+          "size": 1
+        },
+        "value": false
+      }
+    ]
+  }
+]

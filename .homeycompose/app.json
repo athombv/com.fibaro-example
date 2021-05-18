@@ -1,0 +1,47 @@
+{
+  "id": "com.fibaro",
+  "name": {
+    "en": "Fibaro"
+  },
+  "brandColor": "#000000",
+  "sdk": 3,
+  "version": "3.0.14",
+  "compatibility": ">=5.0.0",
+  "description": {
+    "en": "Your home is your castle"
+  },
+  "category": [
+    "appliances",
+    "lights",
+    "security",
+    "climate"
+  ],
+  "images": {
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Athom B.V.",
+    "email": "info@athom.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Ralf van Dooren",
+        "email": "ralfvd@gmail.com"
+      },
+      {
+        "name": "Remco Mengers",
+        "email": "caseda08@hotmail.com"
+      },
+      {
+        "name": "Ted Tolboom",
+        "email": "dTNL.Homey@gmail.com"
+      },
+      {
+        "name": "Patrick van der Westen",
+        "email": "pvdwesten@hotmail.com"
+      }
+    ]
+  }
+}

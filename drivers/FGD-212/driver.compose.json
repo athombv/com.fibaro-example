@@ -1,0 +1,79 @@
+{
+  "id": "FGD-212",
+  "name": {
+    "en": "Dimmer 2"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "measure_power",
+    "meter_power",
+    "onoff"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
+    },
+    "dim": {
+      "opts": {
+        "duration": true
+      }
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.jpg",
+    "small": "{{driverAssetsPath}}/images/small.jpg"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      258
+    ],
+    "productId": [
+      4096,
+      8192,
+      12288,
+      16384,
+      20480,
+      24576,
+      28672,
+      32768,
+      36864,
+      40960,
+      45056
+    ],
+    "zwaveAllianceProductId": 2836,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2836/FGD-212-EN-T-v1.3.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Your {{driverNameEn}} is currently calibrating, this should take about 20s.\nWhen the status LED turns green, press the button three times.",
+        "nl": "De {{driverNameNl}} is aan het kalibreren, dit duurt ongeveer 20s.\nWanneer de status LED groen wordt, druk driemaal op de knop."
+      }
+    },
+    "unlearnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your {{driverNameEn}} three times.",
+        "nl": "Druk driemaal op de knop op de {{driverNameNl}}."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "defaultConfiguration": [
+      {
+        "__comment": "settings double_click to false",
+        "id": 23,
+        "size": 1,
+        "value": 0
+      },
+      {
+        "__comment": "setting scene_activation to true",
+        "id": 28,
+        "size": 1,
+        "value": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "FGR-221",
+  "name": {
+    "en": "Roller Shutter",
+    "nl": "Rolluik"
+  },
+  "class": "windowcoverings",
+  "capabilities": [
+    "windowcoverings_set"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      768
+    ],
+    "productId": [
+      258,
+      260,
+      261,
+      262,
+      263,
+      4106,
+      8202,
+      12298
+    ],
+    "zwaveAllianceProductId": 38,
+    "learnmode": {
+      "instruction": {
+        "en": "Press either the B-button or the first input on your {{driverNameEn}} three times.",
+        "nl": "Druk driemaal op de B-knop op uw {{driverNameNl}}, of schakel drie keer met het eerste input apparaat."
+      }
+    },
+    "associationGroups": [
+      3
+    ]
+  }
+}

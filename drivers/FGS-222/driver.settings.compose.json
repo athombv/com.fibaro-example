@@ -1,0 +1,108 @@
+[
+  {
+    "id": "auto_off",
+    "type": "checkbox",
+    "label": {
+      "en": "Auto-off behaviour",
+      "nl": "Automatisch uit gedrag"
+    },
+    "hint": {
+      "en": "If enabled pressing the switch for the second time will immediately turn off the relays, when disabled they will only turn off automatically.",
+      "nl": "Als geactiveerd zullen de relais bij een tweede keer drukken meteen uitgaan, wanneer niet geactiveerd gaan de relais alleen automatisch uit. "
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "value": false
+  },
+  {
+    "id": "auto_off_relay_1",
+    "type": "number",
+    "label": {
+      "en": "Auto-off relay 1",
+      "nl": "Automatisch uit relais 1"
+    },
+    "hint": {
+      "en": "Set the time relay 1 will turn off automatically.",
+      "nl": "Zet de tijd dat relais 1 automatisch uit gaat."
+    },
+    "zwave": {
+      "index": 4,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 65535
+    },
+    "value": 0
+  },
+  {
+    "id": "auto_off_relay_2",
+    "type": "number",
+    "label": {
+      "en": "Auto-off relay 2",
+      "nl": "Automatisch uit relais 2"
+    },
+    "hint": {
+      "en": "Set the time relay 2 will turn off automatically.",
+      "nl": "Zet de tijd dat relais 2 automatisch uit gaat."
+    },
+    "zwave": {
+      "index": 5,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 65535
+    },
+    "value": 0
+  },
+  {
+    "$extends": "switchType",
+    "id": "switch_type",
+    "zwave": {
+      "index": 14,
+      "size": 1
+    }
+  },
+  {
+    "id": "switch_behaviour",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch behaviour",
+      "nl": "Schakelaar gedrag"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the behaviour of the {{driverNameEn}} when the switch is toggled.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag van de {{driverNameNl}} wanneer de schakelaar omgezet wordt."
+    },
+    "zwave": {
+      "index": 13,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Toggle when switched",
+          "nl": "Wissel als de schakelaar omgezet wordt"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "On when switch is turned on",
+          "nl": "Aan als de schakelaar op aan staat"
+        }
+      }
+    ]
+  },
+  {
+    "$extends": "saveState",
+    "id": "save_power_state"
+  }
+]

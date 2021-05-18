@@ -1,0 +1,22 @@
+{
+  "id": "led_ambient_100",
+  "type": "number",
+  "label": {
+    "en": "Ambient lux to set LED to 100%",
+    "nl": "Omgevings lux waar LED helderheid 100% is"
+  },
+  "zwave": {
+    "index": 83,
+    "size": 2,
+    "signed": false
+  },
+  "value": 1000,
+  "attr": {
+    "min": 1,
+    "max": 65535
+  },
+  "hint": {
+    "en": "The parameter ({{zwaveParameterIndex}}) is relevant only when the parameter LED brightness is set to 0, and must be above the value of ambient lux 1%.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) is alleen relevant wanneer de parameter LED helderheid op 0 staat daarnaast moet de omgevings lux waarde hoger dan 1% zijn."
+  }
+}

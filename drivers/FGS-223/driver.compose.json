@@ -1,0 +1,82 @@
+{
+  "id": "FGS-223",
+  "name": {
+    "en": "Double Switch 2",
+    "nl": "Dubbele Schakelaar 2"
+  },
+  "class": "socket",
+  "capabilities": [
+    "measure_power",
+    "meter_power",
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      515
+    ],
+    "productId": [
+      4096,
+      8192,
+      12288,
+      16384,
+      20480,
+      24576,
+      28672,
+      32768,
+      36864,
+      40960,
+      45056
+    ],
+    "zwaveAllianceProductId": 2731,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2731/FGS-2x3-EN-T-v1.2.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your {{driverNameEn}} three times, this can also be done with the S1 input.",
+        "nl": "Druk driemaal op de knop van uw {{driverNameNl}}, dit kan ook door middel van de S1 input."
+      }
+    },
+    "associationGroupsMultiChannel": [
+      1
+    ],
+    "associationGroups": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 28,
+        "size": 1,
+        "value": 15
+      },
+      {
+        "id": 29,
+        "size": 1,
+        "value": 15
+      }
+    ],
+    "multiChannelNodes": {
+      "2": {
+        "class": "socket",
+        "capabilities": [
+          "measure_power",
+          "meter_power",
+          "onoff"
+        ],
+        "icon": "{{driverAssetsPath}}/icon.svg",
+        "name": {
+          "en": "Right Switch (S2/Q2)",
+          "nl": "Rechter Schakelaar (S2/Q2)"
+        },
+        "settings": []
+      }
+    }
+  }
+}

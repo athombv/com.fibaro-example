@@ -1,0 +1,20 @@
+{
+  "value": 0,
+  "label": {
+    "en": "Offset",
+    "nl": "Correctie"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the value to be added to the measured values.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de waarde die wordt opgeteld aan de gemeten waarden."
+  },
+  "zwave": {
+    "index": 66,
+    "size": 2
+  },
+  "attr": {
+    "min": -1000,
+    "max": 1000
+  },
+  "type": "number"
+}

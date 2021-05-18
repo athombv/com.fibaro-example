@@ -1,0 +1,214 @@
+{
+  "triggers": [
+    {
+      "id": "input_on",
+      "title": {
+        "en": "In-/output turned on",
+        "nl": "In-/uitgang aan geschakeld"
+      },
+      "args": [
+        {
+          "name": "input",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Input 1",
+                "nl": "Ingang 1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Input 2",
+                "nl": "Ingang 2"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Input 3",
+                "nl": "Ingang 3"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Input 4",
+                "nl": "Ingang 4"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "input_off",
+      "title": {
+        "en": "In-/output turned off",
+        "nl": "In-/uitgang uit geschakeld"
+      },
+      "args": [
+        {
+          "name": "input",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Input 1",
+                "nl": "Ingang 1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Input 2",
+                "nl": "Ingang 2"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Input 3",
+                "nl": "Ingang 3"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Input 4",
+                "nl": "Ingang 4"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "analog_input",
+      "title": {
+        "en": "Voltage input changed",
+        "nl": "Voltage ingang veranderd"
+      },
+      "hint": {
+        "en": "This will only trigger if the input type is set to analog",
+        "nl": "Dit zal alleen werken wanneer het ingangtype staat ingesteld op analoog"
+      },
+      "args": [
+        {
+          "name": "input",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Input 1",
+                "nl": "Ingang 1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Input 2",
+                "nl": "Ingang 2"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Input 3",
+                "nl": "Ingang 3"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Input 4",
+                "nl": "Ingang 4"
+              }
+            }
+          ]
+        }
+      ],
+      "tokens": [
+        {
+          "name": "volt",
+          "type": "number",
+          "title": {
+            "en": "Volt"
+          },
+          "example": 5
+        }
+      ]
+    }
+  ],
+  "conditions": [],
+  "actions": [
+    {
+      "id": "RGBW_animation",
+      "title": {
+        "en": "Choose an animation",
+        "nl": "Kies een animatie"
+      },
+      "args": [
+        {
+          "name": "animation",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "6",
+              "label": {
+                "en": "Fire",
+                "nl": "Vuur"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Storm/lightning",
+                "nl": "Storm/onweer"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Rainbow",
+                "nl": "Regenboog"
+              }
+            },
+            {
+              "id": "9",
+              "label": {
+                "en": "Aurora",
+                "nl": "Aurora"
+              }
+            },
+            {
+              "id": "10",
+              "label": {
+                "en": "Police",
+                "nl": "Politie"
+              }
+            },
+            {
+              "id": "11",
+              "label": {
+                "en": "Random animation",
+                "nl": "Willekeurige animatie"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Stop animation, back to previous state",
+                "nl": "Stop animatie, herstel vorige status"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

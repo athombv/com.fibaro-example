@@ -1,0 +1,20 @@
+{
+  "value": 100,
+  "label": {
+    "en": "Low value alarm threshold",
+    "nl": "Drempel waarde voor het te lage waarden alarm"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the threshold at which the low value alarm will go off.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de drempel waaronder het lage waarden alarm afgaat."
+  },
+  "zwave": {
+    "index": 56,
+    "size": 2
+  },
+  "attr": {
+    "min": 1,
+    "max": 600
+  },
+  "type": "number"
+}

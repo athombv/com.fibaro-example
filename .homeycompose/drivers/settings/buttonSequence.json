@@ -1,0 +1,13 @@
+{
+  "type": "text",
+  "label": {
+    "en": "Sequence",
+    "nl": "Reeks"
+  },
+  "value": "0",
+  "pattern": "^0$|^[1-6];([1-6];)?([1-6];)?([1-6];)?[1-6];?",
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) sets a button sequence in the device. Separate button numbers by a semicolon ( ; ), use 2 to 5 buttons. No duplicate sequences are allowed. 0 = sequence disabled. Buttons are numbered from left to right, from top to bottom (1 - 6).",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) stelt een reeks in op het apparaat. Scheid knop nummers door een puntkomma ( ; ), gebruik 2 tot 5 knoppen. 2x dezelfde reeks is niet toegestaan. 0 = reeks uitgeschakeld. Knoppen zijn genummerd van links naar rechts, van boven naar beneden (1 - 6)."
+  }
+}

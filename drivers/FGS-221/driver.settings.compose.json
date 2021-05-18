@@ -1,0 +1,40 @@
+[
+  {
+    "$extends": "autoOffBehaviour",
+    "$id": "auto_off",
+    "zwave": {
+      "index": 3,
+      "size": 1
+    }
+  },
+  {
+    "$extends": "autoOffDelay",
+    "$id": "auto_off_relay_1",
+    "zwave": {
+      "index": 4,
+      "size": 2,
+      "signed": false
+    }
+  },
+  {
+    "$extends": "autoOffDelay",
+    "$id": "auto_off_relay_2",
+    "zwave": {
+      "index": 5,
+      "size": 2,
+      "signed": false
+    }
+  },
+  {
+    "$extends": "switchType",
+    "id": "switch_type",
+    "zwave": {
+      "index": 14,
+      "size": 1
+    }
+  },
+  {
+    "$extends": "saveState",
+    "id": "save_power_state"
+  }
+]

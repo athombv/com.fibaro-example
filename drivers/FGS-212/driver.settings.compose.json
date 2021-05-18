@@ -1,0 +1,31 @@
+[
+  {
+    "$extends": "autoOff",
+    "id": "auto_off"
+  },
+  {
+    "$extends": "autoOffDelay",
+    "id": "auto_off_relay",
+    "zwave": {
+      "index": 4,
+      "size": 2,
+      "signed": false
+    }
+  },
+  {
+    "$extends": "switchType",
+    "$id": "switch_type",
+    "zwave": {
+      "index": 14,
+      "size": 1
+    }
+  },
+  {
+    "$extends": "saveState",
+    "$id": "save_power_state",
+    "zwave": {
+      "index": 16,
+      "size": 1
+    }
+  }
+]

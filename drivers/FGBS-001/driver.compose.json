@@ -1,0 +1,86 @@
+{
+  "id": "FGBS-001",
+  "name": {
+    "en": "Universal Binary Sensor",
+    "nl": "Universal Binary Sensor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "alarm_generic.contact1",
+    "alarm_generic.contact2",
+    "measure_temperature.sensor1",
+    "measure_temperature.sensor2",
+    "measure_temperature.sensor3",
+    "measure_temperature.sensor4"
+  ],
+  "capabilitiesOptions": {
+    "alarm_generic.contact1": {
+      "title": {
+        "en": "Input 1",
+        "nl": "Ingang 1"
+      }
+    },
+    "alarm_generic.contact2": {
+      "title": {
+        "en": "Input 2",
+        "nl": "Ingang 2"
+      }
+    },
+    "measure_temperature.sensor1": {
+      "title": {
+        "en": "Temperature Sensor 1",
+        "nl": "Temperatuur Sensor 1"
+      }
+    },
+    "measure_temperature.sensor2": {
+      "title": {
+        "en": "Temperature Sensor 2",
+        "nl": "Temperatuur Sensor 2"
+      }
+    },
+    "measure_temperature.sensor3": {
+      "title": {
+        "en": "Temperature Sensor 3",
+        "nl": "Temperatuur Sensor 3"
+      }
+    },
+    "measure_temperature.sensor4": {
+      "title": {
+        "en": "Temperature Sensor 4",
+        "nl": "Temperatuur Sensor 4"
+      }
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": 1281,
+    "productId": [
+      258,
+      265,
+      4098,
+      8194,
+      12290
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your {{driverNameEn}} three times.",
+        "nl": "Druk driemaal op de knop van uw {{driverNameNl}}."
+      }
+    },
+    "associationGroups": [
+      3
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 12,
+        "size": 1,
+        "value": 8
+      }
+    ]
+  }
+}

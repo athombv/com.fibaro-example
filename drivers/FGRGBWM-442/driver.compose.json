@@ -1,0 +1,95 @@
+{
+  "id": "FGRGBWM-442",
+  "name": {
+    "en": "RGBW Controller 2"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff",
+    "dim",
+    "light_hue",
+    "light_mode",
+    "light_saturation",
+    "light_temperature",
+    "measure_power",
+    "meter_power",
+    "measure_voltage.input1",
+    "measure_voltage.input2",
+    "measure_voltage.input3",
+    "measure_voltage.input4"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
+    },
+    "dim": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "light_hue": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "light_saturation": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "light_temperature": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "measure_voltage.input1": {
+      "title": {
+        "en": "Input 1",
+        "nl": "Ingang 1"
+      }
+    },
+    "measure_voltage.input2": {
+      "title": {
+        "en": "Input 2",
+        "nl": "Ingang 2"
+      }
+    },
+    "measure_voltage.input3": {
+      "title": {
+        "en": "Input 3",
+        "nl": "Ingang 3"
+      }
+    },
+    "measure_voltage.input4": {
+      "title": {
+        "en": "Input 4",
+        "nl": "Ingang 4"
+      }
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      2306
+    ],
+    "productId": [
+      4096
+    ],
+    "zwaveAllianceProductId": 3589,
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on the {{driverNameEn}} three times.",
+        "nl": "Druk driemaal op de knop op de {{driverNameNl}}."
+      }
+    },
+    "includeSecure": false,
+    "associationGroupsMultiChannel": [
+      0, 1, 6, 7, 8, 9
+    ]
+  }
+}

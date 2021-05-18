@@ -1,0 +1,51 @@
+{
+  "name": {
+    "en": "Motion Sensor",
+    "nl": "Bewegingssensor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "measure_luminance",
+    "measure_temperature",
+    "alarm_motion",
+    "alarm_tamper"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [
+      "CR123A"
+    ]
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      2048
+    ],
+    "productId": [
+      4097,
+      12289
+    ],
+    "zwaveAllianceProductId": 1048,
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your Fibaro Motion Sensor three times",
+        "nl": "Druk driemaal op de knop op de Fibaro Bewegingssensor"
+      }
+    },
+    "associationGroups": [
+      3
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 24,
+        "size": 1,
+        "value": 1
+      }
+    ]
+  }
+}

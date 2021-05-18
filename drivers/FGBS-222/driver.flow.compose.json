@@ -1,0 +1,295 @@
+{
+  "triggers": [
+    {
+      "id": "FGBS-222_i1_on",
+      "title": {
+        "en": "Input 1 opened",
+        "nl": "Ingang 1 geopend"
+      },
+      "args": []
+    },
+    {
+      "id": "FGBS-222_i1_off",
+      "title": {
+        "en": "Input 1 closed",
+        "nl": "Ingang 1 gesloten"
+      },
+      "args": []
+    },
+    {
+      "id": "FGBS-222_i1_switch",
+      "title": {
+        "en": "Input 1 switched",
+        "nl": "Ingang 1 geschakeld"
+      },
+      "args": []
+    },
+    {
+      "id": "FGBS-222_i2_on",
+      "title": {
+        "en": "Input 2 opened",
+        "nl": "Ingang 2 geopend"
+      },
+      "args": []
+    },
+    {
+      "id": "FGBS-222_i2_off",
+      "title": {
+        "en": "Input 2 closed",
+        "nl": "Ingang 2 gesloten"
+      },
+      "args": []
+    },
+    {
+      "id": "FGBS-222_i2_switch",
+      "title": {
+        "en": "Input 2 switched",
+        "nl": "Ingang 2 geschakeld"
+      },
+      "args": []
+    },
+    {
+      "id": "FGBS-222_temp_internal",
+      "title": {
+        "en": "Internal temperature has changed",
+        "nl": "Interal temperatuur is veranderd"
+      },
+      "args": [],
+      "tokens": [
+        {
+          "name": "temp",
+          "type": "number",
+          "title": {
+            "en": "Temperature",
+            "nl": "Temperatuur"
+          },
+          "example": 18
+        }
+      ]
+    },
+    {
+      "id": "FGBS-222_temp1",
+      "title": {
+        "en": "Temperature 1 has changed",
+        "nl": "Temperatuur 1 is veranderd"
+      },
+      "args": [],
+      "tokens": [
+        {
+          "name": "temp",
+          "type": "number",
+          "title": {
+            "en": "Temperature",
+            "nl": "Temperatuur"
+          },
+          "example": 18
+        }
+      ]
+    },
+    {
+      "id": "FGBS-222_temp2",
+      "title": {
+        "en": "Temperature 2 has changed",
+        "nl": "Temperatuur 2 is veranderd"
+      },
+      "args": [],
+      "tokens": [
+        {
+          "name": "temp",
+          "type": "number",
+          "title": {
+            "en": "Temperature",
+            "nl": "Temperatuur"
+          },
+          "example": 18
+        }
+      ]
+    },
+    {
+      "id": "FGBS-222_temp3",
+      "title": {
+        "en": "Temperature 3 has changed",
+        "nl": "Temperatuur 3 is veranderd"
+      },
+      "args": [],
+      "tokens": [
+        {
+          "name": "temp",
+          "type": "number",
+          "title": {
+            "en": "Temperature",
+            "nl": "Temperatuur"
+          },
+          "example": 18
+        }
+      ]
+    },
+    {
+      "id": "FGBS-222_temp4",
+      "title": {
+        "en": "Temperature 4 has changed",
+        "nl": "Temperatuur 4 is veranderd"
+      },
+      "args": [],
+      "tokens": [
+        {
+          "name": "temp",
+          "type": "number",
+          "title": {
+            "en": "Temperature",
+            "nl": "Temperatuur"
+          },
+          "example": 18
+        }
+      ]
+    },
+    {
+      "id": "FGBS-222_temp5",
+      "title": {
+        "en": "Temperature 5 has changed",
+        "nl": "Temperatuur 5 is veranderd"
+      },
+      "args": [],
+      "tokens": [
+        {
+          "name": "temp",
+          "type": "number",
+          "title": {
+            "en": "Temperature",
+            "nl": "Temperatuur"
+          },
+          "example": 18
+        }
+      ]
+    },
+    {
+      "id": "FGBS-222_temp6",
+      "title": {
+        "en": "Temperature 6 has changed",
+        "nl": "Temperatuur 6 is veranderd"
+      },
+      "args": [],
+      "tokens": [
+        {
+          "name": "temp",
+          "type": "number",
+          "title": {
+            "en": "Temperature",
+            "nl": "Temperatuur"
+          },
+          "example": 18
+        }
+      ]
+    },
+    {
+      "id": "analog_input_1",
+      "title": {
+        "en": "Voltage input 1 changed",
+        "nl": "Voltage ingang 1 veranderd"
+      },
+      "hint": {
+        "en": "This will only trigger if the input type is set to analog",
+        "nl": "Dit zal alleen werken wanneer het ingangtype staat ingesteld op analoog"
+      },
+      "tokens": [
+        {
+          "name": "volt",
+          "type": "number",
+          "title": {
+            "en": "Volt"
+          },
+          "example": 5
+        }
+      ]
+    },
+    {
+      "id": "analog_input_2",
+      "title": {
+        "en": "Voltage input 2 changed",
+        "nl": "Voltage ingang 2 veranderd"
+      },
+      "hint": {
+        "en": "This will only trigger if the input type is set to analog",
+        "nl": "Dit zal alleen werken wanneer het ingangtype staat ingesteld op analoog"
+      },
+      "tokens": [
+        {
+          "name": "volt",
+          "type": "number",
+          "title": {
+            "en": "Volt"
+          },
+          "example": 5
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "FGBS-222_i1_state",
+      "title": {
+        "en": "Input 1 !{{is open|is closed}}",
+        "nl": "Ingang 1 !{{is geopend|is gesloten}}"
+      },
+      "args": []
+    },
+    {
+      "id": "FGBS-222_i2_state",
+      "title": {
+        "en": "Input 2 !{{is open|is closed}}",
+        "nl": "Ingang 2 !{{is geopend|is gesloten}}"
+      },
+      "args": []
+    }
+  ],
+  "actions": [
+    {
+      "id": "FGBS-222_o1_on",
+      "title": {
+        "en": "Output 1 on",
+        "nl": "Uitgang 1 aan"
+      },
+      "args": []
+    },
+    {
+      "id": "FGBS-222_o1_off",
+      "title": {
+        "en": "Output 1 off",
+        "nl": "Uitgang 1 uit"
+      },
+      "args": []
+    },
+    {
+      "id": "FGBS-222_o1_toggle",
+      "title": {
+        "en": "Output 1 toggle",
+        "nl": "Uitgang 1 omschakelen"
+      },
+      "args": []
+    },
+    {
+      "id": "FGBS-222_o2_on",
+      "title": {
+        "en": "Output 2 on",
+        "nl": "Uitgang 2 aan"
+      },
+      "args": []
+    },
+    {
+      "id": "FGBS-222_o2_off",
+      "title": {
+        "en": "Output 2 off",
+        "nl": "Uitgang 2 uit"
+      },
+      "args": []
+    },
+    {
+      "id": "FGBS-222_o2_toggle",
+      "title": {
+        "en": "Output 2 toggle",
+        "nl": "Uitgang 2 omschakelen"
+      },
+      "args": []
+    }
+  ]
+}

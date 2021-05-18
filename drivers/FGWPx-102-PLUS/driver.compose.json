@@ -1,0 +1,65 @@
+{
+  "name": {
+    "en": "Wall plug (Z-Wave plus)",
+    "nl": "Tussenstekker (Z-Wave plus)"
+  },
+  "class": "socket",
+  "capabilities": [
+    "measure_power",
+    "meter_power",
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      1538
+    ],
+    "productId": [
+      4097,
+      4099,
+      8193,
+      8195,
+      12289,
+      12291,
+      16385,
+      16387,
+      20481,
+      20483,
+      24577,
+      24579,
+      28673,
+      28675,
+      32769,
+      32771,
+      36865,
+      36867,
+      40961,
+      40963,
+      45057,
+      45059
+    ],
+    "zwaveAllianceProductId": 1653,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1653/FGWPx-102-EN-A-v2.0 29.01.2016-3.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Insert the {{driverNameEn}} in a socket or press the button on your {{driverNameEn}} three times",
+        "nl": "Stop de {{driverNameNl}} in het stopcontact of druk driemaal op de knop op de {{driverNameNl}}"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "“Lifeline” reports the device status and allows\r\nfor assigning single device only (main controller by default)."
+        }
+      }
+    }
+  }
+}

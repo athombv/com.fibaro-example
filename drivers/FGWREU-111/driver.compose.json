@@ -1,0 +1,32 @@
+{
+  "id": "FGWREU-111",
+  "name": {
+    "en": "Walli Roller Shutter",
+    "nl": "Walli Rolluik"
+  },
+  "class": "windowcoverings",
+  "capabilities": [
+    "windowcoverings_set",
+    "windowcoverings_tilt_set"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": 7425,
+    "productId": [
+      4096
+    ],
+    "includeSecure": false,
+    "__comment": "Multichannel nodes don't work properly with secureInclusion due to Fibaro firmware issues",
+    "learnmode": {
+      "instruction": {
+        "en": "Press a button on your {{driverNameEn}} three times.",
+        "nl": "Druk driemaal op een knop op uw {{driverNameNl}}."
+      }
+    },
+    "associationGroupsMultiChannel": [ 0, 1 ]
+  }
+}

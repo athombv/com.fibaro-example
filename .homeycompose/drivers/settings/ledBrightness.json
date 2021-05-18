@@ -1,0 +1,20 @@
+{
+  "value": 50,
+  "label": {
+    "en": "LED brightness (%)",
+    "nl": "LED helderheid (%)"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the percentage brightness of the LED.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het helderheidspercentage voor de LED."
+  },
+  "zwave": {
+    "index": 81,
+    "size": 1
+  },
+  "attr": {
+    "min": 0,
+    "max": 100
+  },
+  "type": "number"
+}

@@ -1,0 +1,16 @@
+{
+  "value": true,
+  "label": {
+    "en": "Activate sensor",
+    "nl": "Activeer sensor"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) enables/disables this sensor.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) schakelt deze sensor in/uit."
+  },
+  "zwave": {
+    "index": 11,
+    "size": 1
+  },
+  "type": "checkbox"
+}

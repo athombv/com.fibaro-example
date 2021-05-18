@@ -1,0 +1,35 @@
+{
+  "name": {
+    "en": "Wall Plug",
+    "nl": "Tussenstekker"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": 1536,
+    "productId": [
+      4096,
+      8192,
+      12288
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Insert the {{driverNameEn}} in a socket or press the button on your {{driverNameEn}} three times",
+        "nl": "Stop de {{driverNameNl}} in het stopcontact of druk driemaal op de knop op de {{driverNameNl}}"
+      }
+    },
+    "associationGroups": [
+      3
+    ]
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff",
+    "measure_power",
+    "meter_power"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  }
+}

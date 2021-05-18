@@ -1,0 +1,55 @@
+{
+  "id": "FGSD-002",
+  "name": {
+    "en": "Smoke Detector (Z-Wave plus)",
+    "nl": "Rookmelder (Z-Wave plus)"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_heat",
+    "alarm_smoke",
+    "measure_temperature"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [ "CR123A" ]
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      3074
+    ],
+    "productId": [
+      4098,
+      4099,
+      8194,
+      12290
+    ],
+    "includeSecure": false,
+    "zwaveAllianceProductId": 2837,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2837/FGSD-002-EN-A-v1.1.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your {{driverNameEn}} three times",
+        "nl": "Druk driemaal op de knop op de {{driverNameNl}}"
+      }
+    },
+    "associationGroups": [
+      1,
+      2,
+      4
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 2,
+        "size": 1,
+        "value": 2
+      }
+    ]
+  }
+}

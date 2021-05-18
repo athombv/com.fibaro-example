@@ -1,0 +1,103 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Contact sensor",
+      "nl": "Contact sensor"
+    },
+    "collapsed": false,
+    "children": [
+      {
+        "$extends": "activateLed",
+        "$id": "led_status"
+      },
+      {
+        "$extends": "defaultPosition",
+        "$id": "type_input",
+        "zwave": {
+          "index": 3,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Closed by default",
+              "nl": "Normaal gesloten"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Opened by default",
+              "nl": "Normaal Open"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Monostable Switch",
+              "nl": "Puls Schakelaar"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Toggle Switch",
+              "nl": "Tuimel Schakelaar"
+            }
+          }
+        ],
+        "value": "0"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature sensor",
+      "nl": "Temperatuurssensor"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "reportThreshold",
+        "$id": "temperature_measure_hystersis",
+        "zwave": {
+          "index": 12,
+          "size": 1,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 255
+        },
+        "value": 8
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Tamper alarm",
+      "nl": "Sabotage alarm"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "cancellationDelay",
+        "$id": "input_alarm_cancellation_delay",
+        "zwave": {
+          "index": 1,
+          "size": 2,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 65535
+        },
+        "value": 0
+      }
+    ]
+  }
+]

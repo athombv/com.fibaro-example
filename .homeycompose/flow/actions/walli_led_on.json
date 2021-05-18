@@ -1,0 +1,91 @@
+{
+  "id": "walli_led_on",
+  "$filter": "flags=zwaveRoot",
+  "title": {
+    "en": "LED Colour when turned on",
+    "nl": "LED Kleur wanneer ingeschakeld"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=FGWDEU-111|FGWDSEU-221|FGWOF-011|FGWREU-111"
+    },
+    {
+      "name": "color",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "0",
+          "label": {
+            "en": "Off",
+            "nl": "Uit"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+            "en": "White",
+            "nl": "Wit"
+          }
+        },
+        {
+          "id": "2",
+          "label": {
+            "en": "Red",
+            "nl": "Rood"
+          }
+        },
+        {
+          "id": "3",
+          "label": {
+            "en": "Green",
+            "nl": "Groen"
+          }
+        },
+        {
+          "id": "4",
+          "label": {
+            "en": "Blue",
+            "nl": "Blauw"
+          }
+        },
+        {
+          "id": "5",
+          "label": {
+            "en": "Yellow",
+            "nl": "Geel"
+          }
+        },
+        {
+          "id": "6",
+          "label": {
+            "en": "Cyan",
+            "nl": "Cyaan"
+          }
+        },
+        {
+          "id": "7",
+          "label": {
+            "en": "Magenta",
+            "nl": "Magenta"
+          }
+        },
+        {
+          "id": "8",
+          "label": {
+            "en": "Changes continuously according to power load",
+            "nl": "Verandert continu afhankelijk van het stroomverbruik"
+          }
+        },
+        {
+          "id": "9",
+          "label": {
+            "en": "Changes in predefined steps according to power load",
+            "nl": "Verandert in stappen afhankelijk van het stroomverbuik"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "FGPB-101",
+  "name": {
+    "en": "Button",
+    "nl": "Druk Knop"
+  },
+  "class": "sensor",
+  "capabilities": [],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      3841
+    ],
+    "productId": [
+      4096,
+      8192,
+      12288,
+      16384,
+      20480,
+      24576,
+      28672,
+      32768,
+      36864,
+      40960,
+      45056
+    ],
+    "zwaveAllianceProductId": 1944,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1944/FGPB-101-EN-T-v1.0.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the {{driverNameEn}} 6 times",
+        "nl": "Druk 6 keer op de {{driverNameNl}}"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": " Lifeline reports the device status and allows for assigning single device only (main controller by default).\r\n"
+        }
+      }
+    }
+  }
+}

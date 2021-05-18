@@ -1,0 +1,70 @@
+{
+  "triggers": [
+    {
+      "id": "FGPB-101",
+      "title": {
+        "en": "Push button",
+        "nl": "Druk knop"
+      },
+      "args": [
+        {
+          "name": "scene",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "Key Pressed 1 time",
+              "label": {
+                "en": "Pressed 1x",
+                "nl": "1x ingedrukt"
+              }
+            },
+            {
+              "id": "Key Pressed 2 times",
+              "label": {
+                "en": "Pressed 2x",
+                "nl": "2x ingedrukt"
+              }
+            },
+            {
+              "id": "Key Pressed 3 times",
+              "label": {
+                "en": "Pressed 3x",
+                "nl": "3x ingedrukt"
+              }
+            },
+            {
+              "id": "Key Pressed 4 times",
+              "label": {
+                "en": "Pressed 4x",
+                "nl": "4x ingedrukt"
+              }
+            },
+            {
+              "id": "Key Pressed 5 times",
+              "label": {
+                "en": "Pressed 5x",
+                "nl": "5x ingedrukt"
+              }
+            },
+            {
+              "id": "Key Held Down",
+              "label": {
+                "en": "Long press (triggers every half second)",
+                "nl": "Lang drukken (activeert elke halve seconde)"
+              }
+            },
+            {
+              "id": "Key Released",
+              "label": {
+                "en": "Long press released",
+                "nl": "Lang drukken gestopt"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "conditions": [],
+  "actions": []
+}

@@ -1,0 +1,21 @@
+{
+  "value": 15,
+  "label": {
+    "en": "Sensitivity",
+    "nl": "Gevoeligheid"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) sets the sensitivity for this sensor.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de gevoeligheid van deze sensor."
+  },
+  "zwave": {
+    "index": 1,
+    "size": 2,
+    "signed": false
+  },
+  "attr": {
+    "min": 8,
+    "max": 255
+  },
+  "type": "number"
+}

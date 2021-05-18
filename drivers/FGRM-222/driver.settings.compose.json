@@ -1,0 +1,162 @@
+[
+  {
+    "id": "reports_type",
+    "type": "dropdown",
+    "label": {
+      "en": "Blind position reports type",
+      "nl": "Rolluik positie rapportage type"
+    },
+    "value": "0",
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines whether the values are sent in Fibar Command Class or Z-Wave Command Class mode.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat waardes verzend in Fibar Command Class of Z-Wave Command Class modus."
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Z-Wave Command Class"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Fibar Command Class"
+        }
+      }
+    ]
+  },
+  {
+    "$extends": "operatingMode",
+    "$id": "operating_mode"
+  },
+  {
+    "$extends": "operatingDevice",
+    "$id": "switch_type",
+    "value": "0",
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what switch is connected to this device.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wat voor een schakelaar het apparaat activeert."
+    },
+    "zwave": {
+      "index": 14,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Double, Momentary switch",
+          "nl": "Dubbele pulsdrukschakelaar "
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Toggle switches",
+          "nl": "Tuimelschakelaars"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Single, momentary switch",
+          "nl": "Enkele pulsdrukschakelaar"
+        }
+      }
+    ]
+  },
+  {
+    "$extends": "reportThreshold",
+    "$id": "power_level_change",
+    "value": 10,
+    "attr": {
+      "min": 1,
+      "max": 100
+    },
+    "zwave": {
+      "index": 40,
+      "size": 1
+    }
+  },
+  {
+    "$extends": "reportInterval",
+    "$id": "periodic_power_level_reports",
+    "attr": {
+      "min": 0,
+      "max": 65534
+    },
+    "zwave": {
+      "index": 42,
+      "size": 2,
+      "signed": false
+    }
+  },
+  {
+    "id": "start_calibration",
+    "type": "checkbox",
+    "label": {
+      "en": "Start calibration",
+      "nl": "Start kalibratie"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) starts the calibration procedure on save.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) start de kalibratieprocedure na het opslaan."
+    },
+    "zwave": {
+      "index": 29,
+      "size": 1
+    },
+    "value": false
+  },
+  {
+    "id": "invertWindowCoveringsDirection",
+    "type": "checkbox",
+    "label": {
+      "en": "Invert movement",
+      "nl": "Keer de beweging om"
+    },
+    "hint": {
+      "en": "This parameter inverts the shutter movement direction.",
+      "nl": "Deze parameter keert de rolluik bewegingsdirectie om."
+    },
+    "value": false
+  },
+  {
+    "id": "scenes_and_associations",
+    "type": "dropdown",
+    "label": {
+      "en": "Scene or association mode",
+      "nl": "Scene of associatie modus."
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines whether this device is in scene or association mode.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat in scene of associatie modus staat."
+    },
+    "zwave": {
+      "index": 50,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Association activated",
+          "nl": "Associatie geactiveerd"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Scenes activated",
+          "nl": "Scenes geactiveerd"
+        }
+      }
+    ]
+  }
+]

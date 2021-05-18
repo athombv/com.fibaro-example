@@ -1,0 +1,366 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "id": "input_threshold",
+        "type": "number",
+        "label": {
+          "en": "Input threshold",
+          "nl": "Ingang drempel"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the amount of voltage on the input(s) that needs to change before being reported.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt hoeveel het voltage op de ingang(en) moet veranderen voor een update wordt verzonden."
+        },
+        "zwave": {
+          "index": 63,
+          "size": 1
+        },
+        "attr": {
+          "min": 0.1,
+          "max": 10,
+          "step": 0.1
+        },
+        "value": 0.5
+      },
+      {
+        "id": "input_config_1",
+        "type": "dropdown",
+        "label": {
+          "en": "Input 1 configuration",
+          "nl": "Ingang 1 configuratie"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines what is (optionally) connected to input 1 of the RGBW controller.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wat er (optioneel) aangesloten is op ingang 1 van de RGBW controller."
+        },
+        "zwave": {
+          "index": 20,
+          "size": 1
+        },
+        "value": "2",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Analog (0 - 10v) without pull-up",
+              "nl": "Analoog (0 - 10v) zonder pull-up"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Analog (0 - 10v) with pull-up",
+              "nl": "Analoog (0 - 10v) met pull-up"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Momentary switch",
+              "nl": "Kortstondige schakelaar"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Toggle switch (toggle state)",
+              "nl": "Tuimel schakelaar (schakel status)"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Toggle switch (switch state based)",
+              "nl": "Tuimel schakelaar (schakelaar status gebaseerd)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input_config_2",
+        "type": "dropdown",
+        "label": {
+          "en": "Input 2 configuration",
+          "nl": "Ingang 2 configuratie"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines what is (optionally) connected to input 2 of the RGBW controller.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wat er (optioneel) aangesloten is op ingang 2 van de RGBW controller."
+        },
+        "zwave": {
+          "index": 21,
+          "size": 1
+        },
+        "value": "2",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Analog (0 - 10v) without pull-up",
+              "nl": "Analoog (0 - 10v) zonder pull-up"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Analog (0 - 10v) with pull-up",
+              "nl": "Analoog (0 - 10v) met pull-up"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Momentary switch",
+              "nl": "Kortstondige schakelaar"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Toggle switch (toggle state)",
+              "nl": "Tuimel schakelaar (schakel status)"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Toggle switch (switch state based)",
+              "nl": "Tuimel schakelaar (schakelaar status gebaseerd)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input_config_3",
+        "type": "dropdown",
+        "label": {
+          "en": "Input 3 configuration",
+          "nl": "Ingang 3 configuratie"
+        },
+
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines what is (optionally) connected to input 3 of the RGBW controller.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wat er (optioneel) aangesloten is op ingang 3 van de RGBW controller."
+        },
+        "zwave": {
+          "index": 22,
+          "size": 1
+        },
+        "value": "2",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Analog (0 - 10v) without pull-up",
+              "nl": "Analoog (0 - 10v) zonder pull-up"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Analog (0 - 10v) with pull-up",
+              "nl": "Analoog (0 - 10v) met pull-up"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Momentary switch",
+              "nl": "Kortstondige schakelaar"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Toggle switch (toggle state)",
+              "nl": "Tuimel schakelaar (schakel status)"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Toggle switch (switch state based)",
+              "nl": "Tuimel schakelaar (schakelaar status gebaseerd)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input_config_4",
+        "type": "dropdown",
+        "label": {
+          "en": "Input 4 configuration",
+          "nl": "Ingang 4 configuratie"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines what is (optionally) connected to input 4 of the RGBW controller.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wat er (optioneel) aangesloten is op ingang 4 van de RGBW controller."
+        },
+        "zwave": {
+          "index": 23,
+          "size": 1
+        },
+        "value": "2",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Analog (0 - 10v) without pull-up",
+              "nl": "Analoog (0 - 10v) zonder pull-up"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Analog (0 - 10v) with pull-up",
+              "nl": "Analoog (0 - 10v) met pull-up"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Momentary switch",
+              "nl": "Kortstondige schakelaar"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Toggle switch (toggle state)",
+              "nl": "Tuimel schakelaar (schakel status)"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Toggle switch (switch state based)",
+              "nl": "Tuimel schakelaar (schakelaar status gebaseerd)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "analog_input_minimum_change",
+        "type": "number",
+        "label": {
+          "en": "Analog input minimum change",
+          "nl": "Minimale verandering analoge ingang"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the minimum input change that the device will respond to, in steps of 0.1v.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de minimale waarde waar het apparaat op reageert, in stappen van 0.1v."
+        },
+        "zwave": {
+          "index": 63,
+          "size": 2,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 100
+        },
+        "value": 5
+      },
+      {
+        "id": "analog_input_reports_periodic",
+        "type": "number",
+        "label": {
+          "en": "Analog input periodic reports",
+          "nl": "Analoge ingang periodiek verzenden"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines on what interval the values of the analog inputs are reported.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt op welke interval de waarden van de analoge ingangen wordt verzonden."
+        },
+        "zwave": {
+          "index": 64,
+          "size": 2,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 32400
+        },
+        "value": 0
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power",
+      "nl": "Stroom"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "id": "watt_report_interval",
+        "type": "number",
+        "label": {
+          "en": "Watt report interval",
+          "nl": "Watt update interval"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines on what interval the Wattage update needs to be send.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt op welke interval een Wattage update wordt verzonden."
+        },
+        "zwave": {
+          "index": 66,
+          "size": 2,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 32400
+        },
+        "value": 0
+      },
+      {
+        "id": "kwh_threshold",
+        "type": "number",
+        "label": {
+          "en": "kWh threshold",
+          "nl": "kWh drempel"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the minimal kWh value change before an update is send.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de minimale kWh waarde verandering voor het word verzonden."
+        },
+        "zwave": {
+          "index": 65,
+          "size": 2,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 500
+        },
+        "value": 10
+      },
+      {
+        "id": "save_state",
+        "type": "checkbox",
+        "label": {
+          "en": "Save power-off state",
+          "nl": "Onthoud status na stroomonderbreking"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the device restores its last known state after power disruption.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat de laatst bekende status herstelt na stroomonderbreking."
+        },
+        "zwave": {
+          "index": 16,
+          "size": 1
+        },
+        "value": false
+      }
+    ]
+  }
+]

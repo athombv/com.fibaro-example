@@ -1,0 +1,53 @@
+{
+  "type": "dropdown",
+  "label": {
+    "en": "Operating mode",
+    "nl": "Besturingsmodus"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the operating mode for this device.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de modus van dit apparaat."
+  },
+  "zwave": {
+    "index": 10,
+    "size": 1
+  },
+  "value": "1",
+  "values": [
+    {
+      "id": "0",
+      "label": {
+        "en": "Roller blind mode, without positioning",
+        "nl": "Rolluik modus, zonder positionering"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Roller blind mode, with positioning",
+        "nl": "Rolluik modus, met positionering"
+      }
+    },
+    {
+      "id": "2",
+      "label": {
+        "en": "Venetian blind mode, with positioning",
+        "nl": "Jaloezie modus, met positionering"
+      }
+    },
+    {
+      "id": "3",
+      "label": {
+        "en": "Gate mode, without positioning",
+        "nl": "Poort modus, zonder positionering"
+      }
+    },
+    {
+      "id": "4",
+      "label": {
+        "en": "Gate mode, with positioning",
+        "nl": "Poort modus, met positionering"
+      }
+    }
+  ]
+}

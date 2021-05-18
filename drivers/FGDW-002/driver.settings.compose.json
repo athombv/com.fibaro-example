@@ -1,0 +1,320 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Contact sensor",
+      "nl": "Contact sensor"
+    },
+    "collapsed": false,
+    "children": [
+      {
+        "$extends": "ledStyle",
+        "$id": "led_indications",
+        "zwave": {
+          "index": 2,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "No indications",
+              "nl": "Geen indicatie"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "indication on change in opening state",
+              "nl": "indicatie bij het openen/sluiten"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "indication on wake up",
+              "nl": "indicatie bij het ontwaken"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "indication on device tampering",
+              "nl": "indicatie bij sabotage"
+            }
+          }
+        ],
+        "value": "0"
+      },
+      {
+        "$extends": "defaultPosition",
+        "$id": "door_window_state",
+        "zwave": {
+          "index": 1,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Closed by default",
+              "nl": "Normaal gesloten"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Opened by default",
+              "nl": "Normaal open"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature sensor",
+      "nl": "Temperatuurssensor"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "reportThreshold",
+        "$id": "temperature_report_threshold",
+        "zwave": {
+          "index": 51,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 300
+        },
+        "value": 10
+      },
+      {
+        "$extends": "measuringInterval",
+        "$id": "temperature_measuring_interval",
+        "zwave": {
+          "index": 50,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 32400
+        },
+        "value": 300
+      },
+      {
+        "$extends": "reportInterval",
+        "zwave": {
+          "index": 52,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 32400
+        },
+        "value": 0
+      },
+      {
+        "$extends": "offset",
+        "$id": "temperature_offset",
+        "zwave": {
+          "index": 53,
+          "size": 2
+        }
+      },
+      {
+        "$extends": "lowThreshold",
+        "$id": "temperature_alarm_low"
+      },
+      {
+        "$extends": "highThreshold",
+        "$id": "temperature_alarm_high"
+      },
+      {
+        "id": "temperature_alarm_reports",
+        "value": "0",
+        "label": {
+          "en": "Temperature alarm reports",
+          "nl": "Temperatuur alarm rapportages"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines when temperature alarms are reported to Homey.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wanneer er temperatuursalarmen worden verstuurd naar Homey."
+        },
+        "zwave": {
+          "index": 54,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "temperature alarms disabled",
+              "nl": "temperatuursalarm uitgeschakeld"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "high temperature alarm",
+              "nl": "temperatuursalarm voor hoge temperaturen"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "low temperature alarm",
+              "nl": "temperatuursalarm voor lage temperaturen"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "high and low temperature alarms enabled",
+              "nl": "temperatuursalarm voor zowel hoge als lage temperaturen"
+            }
+          }
+        ],
+        "type": "dropdown"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Tamper alarm",
+      "nl": "Sabotage alarm"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "activateCancellation",
+        "$id": "tamper_cancellation",
+        "zwave": {
+          "index": 31,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "cancellationDelay",
+        "$id": "tamper_cancellation_delay",
+        "zwave": {
+          "index": 30,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 32400
+        },
+        "value": 5
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Commands",
+      "nl": "Commando's"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "commandActivated",
+        "id": "command_open",
+        "zwave": {
+          "index": 12,
+          "size": 2
+        }
+      },
+      {
+        "$extends": "commandDeactivated",
+        "id": "command_close",
+        "zwave": {
+          "index": 13,
+          "size": 2
+        }
+      },
+      {
+        "$extends": "commandActivatedDelay"
+      },
+      {
+        "$extends": "commandDeactivatedDelay"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Associations",
+      "nl": "Associaties"
+    },
+    "collapsed": true,
+    "children": [
+      {
+        "$extends": "associationGroupTwoTriggers",
+        "$id": "association_group_2_triggers",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "switch after opening and closing"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "switch after opening (parameter 12)"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "switch after closing (parameter 13)"
+            }
+          }
+        ]
+      },
+      {
+        "$extends": "associationSecureMode",
+        "zwave": {
+          "index": 3,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "None of the groups are sent as secure",
+              "nl": "Geen van de groepen wordt beveiligd verstuurd"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Association group 2, on/off sent as secure",
+              "nl": "Associatie groep 2, aan/uit wordt beveiligd verstuurd"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Association group 3, tamper sent as secure",
+              "nl": "Associatie groep 3, trilling wordt beveiligd verstuurd"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Association group 2 and 3 sent as secure (on/off and tamper)",
+              "nl": "Associatie groep 2 en 3 worden beveiligd verstuurd (aan/uit and trilling)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

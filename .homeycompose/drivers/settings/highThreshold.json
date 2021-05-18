@@ -1,0 +1,20 @@
+{
+  "value": 350,
+  "label": {
+    "en": "High value alarm threshold",
+    "nl": "Drempel waarde voor het te hoge waarden alarm"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the threshold at which the high value alarm will go off.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de drempel waarboven het hoge waarden alarm afgaat."
+  },
+  "zwave": {
+    "index": 55,
+    "size": 2
+  },
+  "attr": {
+    "min": 1,
+    "max": 600
+  },
+  "type": "number"
+}

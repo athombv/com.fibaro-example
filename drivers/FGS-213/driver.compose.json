@@ -1,0 +1,67 @@
+{
+  "id": "FGS-213",
+  "name": {
+    "en": "Single Switch 2",
+    "nl": "Enkele Schakelaar 2"
+  },
+  "class": "socket",
+  "capabilities": [
+    "measure_power",
+    "meter_power",
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      1027
+    ],
+    "productId": [
+      4096,
+      8192,
+      12288,
+      16384,
+      20480,
+      24576,
+      28672,
+      32768,
+      36864,
+      40960,
+      45056
+    ],
+    "zwaveAllianceProductId": 1734,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1734/FGS-2x3-EN-T-v1.0 06.06.2016.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on, or the left switch of your {{driverNameEn}} three times",
+        "nl": "Druk driemaal op de knop op de linker schakelaar van {{driverNameNl}}"
+      }
+    },
+    "defaultConfiguration": [
+      {
+        "id": 28,
+        "size": 1,
+        "value": 15
+      },
+      {
+        "id": 29,
+        "size": 1,
+        "value": 15
+      }
+    ],
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": " “Lifeline” reports the device status and allows for assigning single device only (main controller by default)."
+        }
+      }
+    }
+  }
+}

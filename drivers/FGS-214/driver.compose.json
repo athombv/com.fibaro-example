@@ -1,0 +1,43 @@
+{
+  "id": "FGS-214",
+  "name": {
+    "en": "Smart Module",
+    "nl": "Slimme Module"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      1028
+    ],
+    "productId": [
+      4096
+    ],
+    "zwaveAllianceProductId": 3949,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=product_documents/3949/FGS-2x4-T-EN-1.0.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on, or the left switch of your {{driverNameEn}} three times",
+        "nl": "Druk driemaal op de knop op de linker schakelaar van {{driverNameNl}}"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": " “Lifeline” reports the device status and allows for assigning single device only (main controller by default)."
+        }
+      }
+    }
+  }
+}

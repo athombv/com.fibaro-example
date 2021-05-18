@@ -1,0 +1,169 @@
+{
+  "triggers": [
+    {
+      "id": "FGKF-601-scene",
+      "title": {
+        "en": "Keyfob buttons",
+        "nl": "Keyfob knoppen"
+      },
+      "hint": {
+        "en": "In order to use \"Pressed 2x/3x\" enable this functionality in the device settings.",
+        "nl": "Om gebruik te maken van \"2x/3x ingedrukt\" schakel deze functionaliteit in via de apparaat instellingen."
+      },
+      "args": [
+        {
+          "name": "button",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Square (□)",
+                "nl": "Vierkant (□)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Circle (○)",
+                "nl": "Cirkel (○)"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Cross (x)",
+                "nl": "Kruis (x)"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Triangle (△)",
+                "nl": "Driehoek (△)"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Minus (-)",
+                "nl": "Min (-)"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Plus (+)",
+                "nl": "Plus (+)"
+              }
+            }
+          ]
+        },
+        {
+          "name": "scene",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "Key Pressed 1 time",
+              "label": {
+                "en": "Pressed 1x",
+                "nl": "1x ingedrukt"
+              }
+            },
+            {
+              "id": "Key Pressed 2 times",
+              "label": {
+                "en": "Pressed 2x",
+                "nl": "2x ingedrukt"
+              }
+            },
+            {
+              "id": "Key Pressed 3 times",
+              "label": {
+                "en": "Pressed 3x",
+                "nl": "3x ingedrukt"
+              }
+            },
+            {
+              "id": "Key Held Down",
+              "label": {
+                "en": "Long press",
+                "nl": "Lang drukken"
+              }
+            },
+            {
+              "id": "Key Released",
+              "label": {
+                "en": "Long press released",
+                "nl": "Lang drukken gestopt"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FGKF-601-sequence",
+      "title": {
+        "en": "Keyfob sequence",
+        "nl": "Keyfob reeks"
+      },
+      "hint": {
+        "en": "First configure the sequences in the device settings panel of the Keyfob.",
+        "nl": "Stel eerst reeksen in via de apparaat instellingen van de Keyfob."
+      },
+      "args": [
+        {
+          "name": "sequence",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "7",
+              "label": {
+                "en": "Sequence 1",
+                "nl": "Reeks 1"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Sequence 2",
+                "nl": "Reeks 2"
+              }
+            },
+            {
+              "id": "9",
+              "label": {
+                "en": "Sequence 3",
+                "nl": "Reeks 3"
+              }
+            },
+            {
+              "id": "10",
+              "label": {
+                "en": "Sequence 4",
+                "nl": "Reeks 4"
+              }
+            },
+            {
+              "id": "11",
+              "label": {
+                "en": "Sequence 5",
+                "nl": "Reeks 5"
+              }
+            },
+            {
+              "id": "12",
+              "label": {
+                "en": "Sequence 6",
+                "nl": "Reeks 6"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "conditions": [],
+  "actions": []
+}

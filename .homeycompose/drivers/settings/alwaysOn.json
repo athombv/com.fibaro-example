@@ -1,0 +1,16 @@
+{
+  "type": "checkbox",
+  "label": {
+    "en": "Always on",
+    "nl": "Altijd aan"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines if the device is always on. When this parameter is enabled the device will remain always on and stop reacting to the B-button and alarm frames",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat altijd aan is. Wanneer geactiveerd zal het apparaat constant aan zijn, en niet meer reageren op de B-knop en alarm frames."
+  },
+  "zwave": {
+    "index": 1,
+    "size": 1
+  },
+  "value": false
+}

@@ -1,0 +1,17 @@
+{
+	"id": "FGD-21x_dim_stopLevelChange",
+	"title": {
+		"en": "Stop dim level change",
+		"nl": "Stop helderheid transitie"
+	},
+	"hint": {
+		"en": "This action card will trigger the stop of a dim level change.",
+		"nl": "Deze actie kaart start een helderheids transitie in de ingestelde richting."
+	},
+	"args": [
+		{
+			"type": "device",
+			"name": "device",
+			"filter": "driver_id=FGD-211|FGD-212"
+        }]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "FGWDSEU-221",
+  "name": {
+    "en": "Walli Switch"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff.output1",
+    "onoff.output2",
+    "measure_power.output1",
+    "meter_power.output1",
+    "measure_power.output2",
+    "meter_power.output2"
+  ],
+  "capabilitiesOptions": {
+    "onoff.output1": {
+      "title": {
+        "en": "Output 1",
+        "nl": "Uitgang 1"
+      }
+    },
+    "onoff.output2": {
+      "title": {
+        "en": "Output 2",
+        "nl": "Uitgang 2"
+      }
+    },
+    "measure_power.output1": {
+      "title": {
+        "en": "Power - Output 1",
+        "nl": "Energie - Uitgang 1"
+      }
+    },
+    "meter_power.output1": {
+      "title": {
+        "en": "Power meter - Output 1",
+        "nl": "Energiemeter - Uitgang 1"
+      }
+    },
+    "measure_power.output2": {
+      "title": {
+        "en": "Power - Output 2",
+        "nl": "Energie - Uitgang 2"
+      }
+    },
+    "meter_power.output2": {
+      "title": {
+        "en": "Power meter - Output 2",
+        "nl": "Energiemeter - Uitgang 2"
+      }
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      6913,
+      6657
+    ],
+    "productId": [
+      4096
+    ],
+    "includeSecure": false,
+    "__comment": "Multichannel nodes don't work properly with secureInclusion due to Fibaro firmware issues",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press a button on your {{driverNameEn}} three times",
+        "nl": "Druk driemaal op een knop van uw {{driverNameNl}}"
+      }
+    },
+    "associationGroupsMultiChannel": [
+      1
+    ],
+    "associationGroups": [
+      2,
+      3,
+      4
+    ]
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "triggers": [
+    {
+      "id": "RGBW_input_on",
+      "title": {
+        "en": "In-/output turned on",
+        "nl": "In-/uitgang aan geschakeld"
+      },
+      "args": [
+        {
+          "name": "input",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Input 1",
+                "nl": "Ingang 1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Input 2",
+                "nl": "Ingang 2"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Input 3",
+                "nl": "Ingang 3"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Input 4",
+                "nl": "Ingang 4"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "RGBW_input_off",
+      "title": {
+        "en": "In-/output turned off",
+        "nl": "In-/uitgang uit geschakeld"
+      },
+      "args": [
+        {
+          "name": "input",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Input 1",
+                "nl": "Ingang 1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Input 2",
+                "nl": "Ingang 2"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Input 3",
+                "nl": "Ingang 3"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Input 4",
+                "nl": "Ingang 4"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "RGBW_volt_input1",
+      "title": {
+        "en": "Voltage input 1 changed",
+        "nl": "Voltage ingang 1 veranderd"
+      },
+      "hint": {
+        "en": "This will only trigger if the input type is set to analog",
+        "nl": "Dit zal alleen werken wanneer het ingangtype staat ingesteld op analoog"
+      },
+      "args": [],
+      "tokens": [
+        {
+          "name": "volt",
+          "type": "number",
+          "title": {
+            "en": "Volt"
+          },
+          "example": 5
+        }
+      ]
+    },
+    {
+      "id": "RGBW_volt_input2",
+      "title": {
+        "en": "Voltage input 2 changed",
+        "nl": "Voltage ingang 2 veranderd"
+      },
+      "hint": {
+        "en": "This will only trigger if the input type is set to analog",
+        "nl": "Dit zal alleen werken wanneer het ingangtype staat ingesteld op analoog"
+      },
+      "args": [],
+      "tokens": [
+        {
+          "name": "volt",
+          "type": "number",
+          "title": {
+            "en": "Volt"
+          },
+          "example": 5
+        }
+      ]
+    },
+    {
+      "id": "RGBW_volt_input3",
+      "title": {
+        "en": "Voltage input 3 changed",
+        "nl": "Voltage ingang 3 veranderd"
+      },
+      "hint": {
+        "en": "This will only trigger if the input type is set to analog",
+        "nl": "Dit zal alleen werken wanneer het ingangtype staat ingesteld op analoog"
+      },
+      "args": [],
+      "tokens": [
+        {
+          "name": "volt",
+          "type": "number",
+          "title": {
+            "en": "Volt"
+          },
+          "example": 5
+        }
+      ]
+    },
+    {
+      "id": "RGBW_volt_input4",
+      "title": {
+        "en": "Voltage input 4 changed",
+        "nl": "Voltage ingang 4 veranderd"
+      },
+      "hint": {
+        "en": "This will only trigger if the input type is set to analog",
+        "nl": "Dit zal alleen werken wanneer het ingangtype staat ingesteld op analoog"
+      },
+      "args": [],
+      "tokens": [
+        {
+          "name": "volt",
+          "type": "number",
+          "title": {
+            "en": "Volt"
+          },
+          "example": 5
+        }
+      ]
+    }
+  ],
+  "conditions": [],
+  "actions": [
+    {
+      "id": "RGBW_specific",
+      "title": {
+        "en": "Set specific brightness",
+        "nl": "Stel specifieke helderheid in"
+      },
+      "args": [
+        {
+          "name": "color",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "r",
+              "label": {
+                "en": "Red / output 1",
+                "nl": "Rood / uitgang 1"
+              }
+            },
+            {
+              "id": "g",
+              "label": {
+                "en": "Green / output 2",
+                "nl": "Groen / uitgang 2"
+              }
+            },
+            {
+              "id": "b",
+              "label": {
+                "en": "Blue / output 3",
+                "nl": "Blauw / uitgang 3"
+              }
+            },
+            {
+              "id": "w",
+              "label": {
+                "en": "White / output 4",
+                "nl": "Wit / uitgang 4"
+              }
+            }
+          ]
+        },
+        {
+          "name": "brightness",
+          "type": "range",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "label": "%",
+          "labelMultiplier": 100
+        }
+      ]
+    },
+    {
+      "id": "RGBW_animation",
+      "title": {
+        "en": "Choose an animation",
+        "nl": "Kies een animatie"
+      },
+      "hint": {
+        "en": "Animations only work if the mode type is set to RGB(W)",
+        "nl": "Animaties werken alleen als de mode type is ingesteld op RGB(W)"
+      },
+      "args": [
+        {
+          "name": "animation",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "6",
+              "label": {
+                "en": "Fire",
+                "nl": "Vuur"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Storm/lightning",
+                "nl": "Storm/onweer"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Rainbow",
+                "nl": "Regenboog"
+              }
+            },
+            {
+              "id": "9",
+              "label": {
+                "en": "Aurora",
+                "nl": "Aurora"
+              }
+            },
+            {
+              "id": "10",
+              "label": {
+                "en": "Police",
+                "nl": "Politie"
+              }
+            },
+            {
+              "id": "11",
+              "label": {
+                "en": "Random animation",
+                "nl": "Willekeurige animatie"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Stop animation",
+                "nl": "Stop animatie"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Stop animation, back to previous state",
+                "nl": "Stop animatie, herstel vorige status"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

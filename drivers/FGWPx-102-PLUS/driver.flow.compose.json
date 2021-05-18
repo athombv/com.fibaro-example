@@ -1,0 +1,169 @@
+{
+  "triggers": [],
+  "conditions": [],
+  "actions": [
+    {
+      "id": "FGWPx-102-PLUS_led_on",
+      "title": {
+        "en": "LED Colour, On State",
+        "nl": "LED Kleur, Aan Status"
+      },
+      "args": [
+        {
+          "name": "color",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Power: Predefined Colours",
+                "nl": "Energie: Vooringestelde Kleuren"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Power: Full Colour Spectrum",
+                "nl": "Energie: Volledig Kleuren Spectrum"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "White",
+                "nl": "Wit"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Red",
+                "nl": "Rood"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Green",
+                "nl": "Groen"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Blue",
+                "nl": "Blauw"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Yellow",
+                "nl": "Geel"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Cyan",
+                "nl": "Cyaan"
+              }
+            },
+            {
+              "id": "9",
+              "label": {
+                "en": "Magenta",
+                "nl": "Magenta"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "LED Off",
+                "nl": "LED Uit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FGWPx-102-PLUS_led_off",
+      "title": {
+        "en": "LED Colour, Off State",
+        "nl": "LED Kleur, Uit Status"
+      },
+      "args": [
+        {
+          "name": "color",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Last Colour before off",
+                "nl": "Laatste Kleur voor uit"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "White",
+                "nl": "Wit"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Red",
+                "nl": "Rood"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Green",
+                "nl": "Groen"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Blue",
+                "nl": "Blauw"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Yellow",
+                "nl": "Geel"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Cyan",
+                "nl": "Cyaan"
+              }
+            },
+            {
+              "id": "9",
+              "label": {
+                "en": "Magenta",
+                "nl": "Magenta"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "LED Off",
+                "nl": "LED Uit"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "auto_off",
+    "type": "checkbox",
+    "label": {
+      "en": "Auto-off behaviour",
+      "nl": "Automatisch uit gedrag"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not pressing the switch a second time will immediately turn of the relay.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het tweemaal indrukken van de schakelaar het relais direct uitschakelt."
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "value": false
+  },
+  {
+    "id": "auto_off_relay",
+    "type": "number",
+    "label": {
+      "en": "Auto-off relay",
+      "nl": "Automatisch uit relais"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the time after which the relay will turn off automatically.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd waarna het relais automatisch uit gaat."
+    },
+    "zwave": {
+      "index": 4,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 65535
+    },
+    "value": 0
+  },
+  {
+    "$extends": "operatingDevice",
+    "$id": "switch_type",
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the type of switch connected to input 1 of the {{driverNameEn}}.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) specificeert het type schakelaar dat is aangesloten op ingang 1 van de {{driverNameNl}}."
+    },
+    "zwave": {
+      "index": 14,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsdrukschakelaar"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Toggle switch",
+          "nl": "Tuimelschakelaar"
+        }
+      }
+    ],
+    "value": "1"
+  },
+  {
+    "$extends": "saveState",
+    "$id": "save_power_state",
+    "zwave": {
+      "index": 16,
+      "size": 1
+    }
+  }
+]

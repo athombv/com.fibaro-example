@@ -1,0 +1,62 @@
+{
+  "id": "FGD-211",
+  "name": {
+    "en": "Dimmer"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.jpg",
+    "small": "{{driverAssetsPath}}/images/small.jpg"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      256
+    ],
+    "productId": [
+      260,
+      262,
+      263,
+      265,
+      4106,
+      8202,
+      12298
+    ],
+    "zwaveAllianceProductId": 88,
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your {{driverNameEn}} three times",
+        "nl": "Druk driemaal op de knop van uw {{driverNameNl}}"
+      }
+    },
+    "associationGroups": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 19,
+        "size": 1,
+        "value": 1
+      },
+      {
+        "id": 41,
+        "size": 1,
+        "value": 1
+      }
+    ]
+  },
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
+    }
+  }
+}
