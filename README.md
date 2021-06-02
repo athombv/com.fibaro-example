@@ -8,4 +8,4 @@ Read the [Homey Apps SDK Documentation](https://apps.developer.homey.app) for mo
 
 ## What does this app do?
 
-The Fibaro app uses the [ZwaveDriver](https://athombv.github.io/node-homey-zwavedriver/) library to connect with Fibaro devices using the Z-Wave protocol. Read more about Z-Wave development at https://apps.developer.homey.app/wireless/z-wave.
+The Fibaro app uses the [`homey-zwavedriver`](https://athombv.github.io/node-homey-zwavedriver/) library to connect with Fibaro devices using the Z-Wave protocol. Read more about Z-Wave development at https://apps.developer.homey.app/wireless/z-wave.
